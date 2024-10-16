@@ -1,0 +1,68 @@
+/* src/components/Footer.css */
+
+.footer-fixed {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: linear-gradient(to right, #ec7700 0%, #ce000e 100%);
+  color: white;
+  text-align: center;
+  padding: 10px 0; /* This contributes to the height */
+  z-index: 10;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; /* Space between items */
+}
+
+.footer-button {
+  background: white;
+  color: red;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.footer-button:hover {
+  opacity: 0.8; /* Slight hover effect */
+}
+
+/* src/components/Footer.css */
+
+.footer-scroll {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  background: lightgrey;
+  color: black;
+  text-align: right;
+  padding: 10px;
+  display: flex; /* Flex display for alignment */
+  justify-content: flex-end; /* Align items to the right */
+  gap: 20px; /* Space between items */
+  opacity: 0; /* Initially hidden */
+  transform: translateY(20px); /* Start slightly lower for smooth slide effect */
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Transition for smooth appearance */
+  z-index: 20;
+}
+
+.footer-scroll.visible {
+  opacity: 1; /* Fully visible */
+  transform: translateY(0); /* Move to original position */
+}
+
+
+.footer-scroll-content {
+  display: flex;
+  justify-content: flex-end; /* Align items to the right */
+  gap: 20px; /* Space between items */
+}
+
+.footer-scroll-item {
+  cursor: pointer; /* Change cursor to pointer */
+}
