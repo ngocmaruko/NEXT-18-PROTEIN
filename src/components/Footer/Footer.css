@@ -1,4 +1,4 @@
-/* src/components/Footer.css */
+/* footer-fixed */
 
 .footer-fixed {
   position: fixed;
@@ -8,7 +8,7 @@
   background: linear-gradient(to right, #ec7700 0%, #ce000e 100%);
   color: white;
   text-align: center;
-  padding: 10px 0; /* This contributes to the height */
+  padding: 15px 0; /* This contributes to the height */
   z-index: 10;
 }
 
@@ -16,7 +16,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px; /* Space between items */
+  gap: 30px; /* Space between items */
 }
 
 .footer-button {
@@ -29,11 +29,13 @@
 }
 
 .footer-button:hover {
-  opacity: 0.8; /* Slight hover effect */
+  opacity: 0.8;
 }
-
-/* src/components/Footer.css */
-
+.footer-item span{
+  font-weight: bold;
+  font-size: 15px;
+}
+/* footer-scroll */
 .footer-scroll {
   position: fixed;
   left: 0;

@@ -1,0 +1,108 @@
+/* Splash.css */
+.splash-container {
+  position: fixed; /* Full screen coverage */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, #ec7700 0%, #ce000e 100%);
+  overflow: hidden;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.5s ease-out; /* Smooth transition for background */
+  pointer-events: none; /* Prevent interactions during splash */
+}
+
+.splash-container.hidden {
+  opacity: 0; /* Hide splash screen by fading out */
+}
+
+.image-container {
+  position: relative;
+  display: flex;
+  flex-direction: column; /* Stack images vertically */
+  align-items: center; /* Center horizontally */
+  justify-content: center; /* Center vertically */
+  width: 45%;
+  max-width: 450px;
+  z-index: 1; /* Ensure images are above the background */
+}
+
+.image-left,
+.image-right {
+  width: 350px; /* Adjust size as necessary */
+  height: auto; /* Maintain aspect ratio */
+  opacity: 1; /* Visible initially */
+}
+
+.image-left {
+  animation: flyInFromLeft 1s forwards, stayInCenter 0.75s 1s forwards, flyOutToLeft 1s 1.75s forwards; /* Adjusted durations */
+}
+
+.image-right {
+  animation: flyInFromRight 1s forwards, stayInCenter 0.75s 1s forwards, flyOutToRight 1s 1.75s forwards; /* Adjusted durations */
+}
+
+.content {
+  position: relative;
+  opacity: 0; /* Start hidden */
+  transition: opacity 0.5s; /* Smooth transition for content */
+  z-index: 1; /* Ensure content is above the splash */
+}
+
+.show-content {
+  opacity: 1; /* Fade in content */
+}
+
+@keyframes flyInFromLeft {
+  from {
+    transform: translateX(-100vw);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes flyInFromRight {
+  from {
+    transform: translateX(100vw);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes flyOutToLeft {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(-100vw);
+    opacity: 0;
+  }
+}
+
+@keyframes flyOutToRight {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100vw);
+    opacity: 0;
+  }
+}
+
+@keyframes stayInCenter {
+  0%, 100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

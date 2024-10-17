@@ -1,0 +1,46 @@
+/* src/components/Hero.css */
+.hero {
+  background-image: url('https://picsum.photos/1920/1080'); /* Background image URL */
+  background-size: cover; /* Cover the entire hero area */
+  background-position: center; /* Center the image */
+  height: calc(100vh - 120px); /* Full viewport height minus the navbar height */
+  display: flex; /* Use flexbox for centering text */
+  justify-content: flex-start; /* Align items to the left */
+  align-items: center; /* Center vertically */
+  position: relative; /* Position relative to allow absolute positioning of text */
+}
+
+.hero-text {
+  color: white; /* Text color */
+  text-align: left; /* Align text to the left */
+  padding: 20px; /* Padding around the text */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 12vw; /* Responsive font size */
+  overflow: hidden; /* Hide overflow text */
+  white-space: nowrap; /* Prevent text from wrapping to the next line */
+  text-overflow: ellipsis; /* Show ellipsis (...) for overflow */
+  max-width: 1180px; /* Maximum width to match the navbar */
+  margin-left: 30px;
+}
+
+.hero-text h1 {
+  font-size: 6vw; /* Responsive font size */
+  line-height: 1;
+  margin-bottom: 0.2em;
+}
+
+.hero-text p {
+  font-size: 3vw; /* Responsive font size */
+  line-height: 1.2;
+}
+@media (max-width:768px) {
+  .hero-text {
+    font-size: 20vw; /* Responsive font size */
+  }
+  .hero-text h1 {
+    font-size: 15vw; /* Responsive font size */
+  }
+  .hero-text p {
+    font-size: 8vw; /* Responsive font size */
+  }
+}

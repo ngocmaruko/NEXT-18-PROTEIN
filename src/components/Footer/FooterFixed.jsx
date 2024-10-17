@@ -11,8 +11,7 @@ const FooterFixed = () => {
         <footer className="footer-fixed">
             <div className="footer-content">
                 <div className="footer-item">
-                    <span>NEXT18の</span>
-                    <strong>ご購入はこちら</strong>
+                    <span>NEXT18の<br /> ご購入はこちら</span>
                 </div>
                 <button className="footer-button">HONGO公式サイト</button>
                 <button className="footer-button">Amazon</button>
