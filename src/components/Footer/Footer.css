@@ -8,7 +8,7 @@
   background: linear-gradient(to right, #ec7700 0%, #ce000e 100%);
   color: white;
   text-align: center;
-  padding: 15px 0; /* This contributes to the height */
+  padding: 12px 0; /* This contributes to the height */
   z-index: 10;
 }
 

@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center; /* Center the content horizontally */
   align-items: center;
-  padding: 20px 0;
+  padding: 12px 0;
   background-color: #DC3707;
   background: linear-gradient(to right, #ec7700 0%, #ce000e 100%);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
