@@ -1,0 +1,46 @@
+/* src/components/Dedication.css */
+
+.intake-timing {
+  display: flex;
+  flex-direction: column; /* Stack header and images vertically */
+  align-items: center; /* Center items horizontally */
+  padding: 20px;
+}
+
+.intake-timing-img {
+  display: flex;
+  justify-content: center; /* Center the images when there are 2 */
+  gap: 20px; /* Space between images */
+  padding: 30px 0;
+}
+
+.image-wrapper {
+  padding: 10px;
+  text-align: center; /* Center the label below the image */
+}
+
+.round-image {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%; /* Makes the image round */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.image-label {
+  margin-top: 8px; /* Space between the image and the label */
+  font-size: 14px; /* Adjust font size as needed */
+  color: #333; /* Label color */
+  background-color: lightgray;
+}
+
+/* Media query for smaller screens (show 2 images per row) */
+@media (max-width: 768px) {
+  .intake-timing-img {
+    justify-content: space-between; /* Use space-between for smaller screens */
+  }
+  .round-image {
+    width: 120px;
+    height: 120px;
+  }
+}
