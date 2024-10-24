@@ -1,16 +1,16 @@
-/* src/components/Dedication.css */
-
-.intake-timing {
+/* sec1 */
+.sec1 {
   display: flex;
   flex-direction: column; /* Stack header and images vertically */
   align-items: center; /* Center items horizontally */
-  padding: 20px;
+
 }
 
-.intake-timing-img {
+.sec1-img {
   display: flex;
-  justify-content: center; /* Center the images when there are 2 */
-  gap: 20px; /* Space between images */
+  justify-content: space-around; /* Center the images when there are 2 */
+  flex-wrap: wrap;
+  gap: 60px; /* Space between images */
   padding: 30px 0;
 }
 
@@ -20,8 +20,8 @@
 }
 
 .round-image {
-  width: 150px;
-  height: 150px;
+  width: 240px;
+  height: 240px;
   object-fit: cover;
   border-radius: 50%; /* Makes the image round */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -31,16 +31,145 @@
   margin-top: 8px; /* Space between the image and the label */
   font-size: 14px; /* Adjust font size as needed */
   color: #333; /* Label color */
-  background-color: lightgray;
+  background-color: #f0f0f0;
 }
 
-/* Media query for smaller screens (show 2 images per row) */
 @media (max-width: 768px) {
-  .intake-timing-img {
-    justify-content: space-between; /* Use space-between for smaller screens */
-  }
   .round-image {
-    width: 120px;
-    height: 120px;
+    width: 200px;
+    height: 200px;
   }
+  .sec1-img {
+    display: flex;
+    justify-content: space-around; /* Center the images when there are 2 */
+    gap: 30px; /* Space between images */
+    padding: 30px 0;
+  }
+}
+
+/*sec2*/
+.sec2{
+  background-color: #f0f0f0;
+  position: relative;
+
+}
+.triangle {
+  position: absolute;
+  top: 17%;
+  left: 50%;
+  transform: translateX(-50%);
+  height: calc(100px / 2 * tan(60deg));
+  width: 100px;
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+  background-color: white; /* Triangle color */
+
+}
+
+.attention-text h2 {
+  position: relative;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.attention-text p {
+  line-height: 1.6;
+}
+.graph-image {
+  width: 100%; /* Makes the graph responsive */
+  margin: 20px 0; /* Adds space above and below the graph */
+}
+.inner .growth-nutrients p {
+  text-align: left;
+}
+@media (max-width:768px) {
+  .triangle {
+    top: 10%;
+  }
+}
+
+/*sec3*/
+
+.sec3 .graph p{
+  text-align: right;
+  margin-bottom: 40px;
+  font-size: 0.8em;
+}
+
+/*sec4*/
+.sec4 {
+  background-color: #f0f0f0; 
+  position: relative; /* Allow positioning of the round shape */
+}
+
+.mct-oil {
+  position: relative; /* Positioning for z-index */
+  z-index: 1; /* Bring the text above the round shape */
+}
+
+.round-shape {
+  width: 300px;
+  height: 300px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute; /* Positioning for overlay effect */
+  bottom: 30px;
+  left: 20%;
+}
+
+@media (max-width: 768px) {
+  .round-shape {
+      position: static; /* Change to normal flow */
+      margin: 20px auto 0; /* Center it with auto margins */
+      display: block; /* Ensure it displays as a block */
+      width: 230px;
+      height: 230px;
+  }
+}
+
+/* sec5 */
+
+
+.paragraph {
+  position: relative; /* For positioning the images */
+  padding: 20px; /* Space around text */
+  overflow: hidden; /* Ensures images don’t overflow */
+}
+
+.text {
+  position: relative;
+  z-index: 1; /* Make sure text is above the images */
+  padding: 20px; /* Add some space around text */
+}
+
+.centered {
+  text-align: center;
+}
+
+.right {
+  text-align: right;
+}
+
+.left {
+  text-align: left;
+}
+
+.image {
+  position: absolute;
+  width: 200px; /* Adjust size as needed */
+  height: 200px; /* Adjust size as needed */
+  border-radius: 50%; /* Makes it round */
+  background-size: cover; /* Ensures the image covers the div */
+  background-position: center; /* Centers the image */
+}
+
+.right-image {
+  right: 20px; /* Position the image on the right */
+  top: 50%;
+  transform: translateY(-50%); /* Center vertically */
+}
+
+.left-image {
+  left: 20px; /* Position the image on the left */
+  top: 50%;
+  transform: translateY(-50%); /* Center vertically */
 }

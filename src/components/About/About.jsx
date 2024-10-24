@@ -5,7 +5,7 @@ import tablet from "../../assets/tablet.jpg";
 const About = () => {
   return (
     <section className="about-section">
-      <div class="inner">
+      <div className="inner">
         <h1>NEXT-18PROTEIN</h1>
         <h4>スクスク伸びる成長期のカラダに必要な栄養素をシッカリ配合！</h4>
         <p>

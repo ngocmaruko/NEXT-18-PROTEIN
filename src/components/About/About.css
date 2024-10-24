@@ -1,5 +1,5 @@
 .about-section {
-  background-color: lightgray;
+  background-color: #f0f0f0;
 }
 
 .about-section h1 {
@@ -13,7 +13,7 @@
 .image-grid {
   display: flex;
   flex-wrap: wrap; /* Enable wrapping of images */
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .image-item {
@@ -46,5 +46,10 @@
 @media (max-width:768px) {
   .image-grid{
     gap: 10px;
+  }
+  .image-circle {
+    width: 140px;
+    height: 140px;
+    
   }
 }

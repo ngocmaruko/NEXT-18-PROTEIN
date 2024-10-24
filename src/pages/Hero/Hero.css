@@ -1,17 +1,29 @@
-/* src/components/Hero.css */
 .hero {
-  background-image: url('https://picsum.photos/1920/1080'); /* Background image URL */
+  background-image: url('https://hongo3.co.jp/products/domestic/img/next_18protein/sec03_bg1.jpg'); /* Background image URL */
   background-size: cover; /* Cover the entire hero area */
-  background-position: center; /* Center the image */
+  background-position: top; /* Center the image */
   height: calc(100vh - 120px); /* Full viewport height minus the navbar height */
   display: flex; /* Use flexbox for centering text */
   justify-content: flex-start; /* Align items to the left */
   align-items: center; /* Center vertically */
   position: relative; /* Position relative to allow absolute positioning of text */
+  z-index: 1; /* Ensure hero section is above the background */
 }
 
+/* Add a dark overlay
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(32, 26, 29, 0.5); * Dark transparent overlay (50% opacity) *
+  z-index: -1; * Ensure the overlay is behind the content *
+}
+*/
 .hero-text {
-  color: white; /* Text color */
+  color: grey;
   text-align: left; /* Align text to the left */
   padding: 20px; /* Padding around the text */
   border-radius: 10px; /* Rounded corners */
@@ -21,18 +33,21 @@
   text-overflow: ellipsis; /* Show ellipsis (...) for overflow */
   max-width: 1180px; /* Maximum width to match the navbar */
   margin-left: 30px;
+  z-index: 2; /* Make sure the text is on top of the overlay */
 }
 
 .hero-text h1 {
   font-size: 6vw; /* Responsive font size */
   line-height: 1;
   margin-bottom: 0.2em;
+  color: #ce000e;
 }
 
 .hero-text p {
   font-size: 3vw; /* Responsive font size */
   line-height: 1.2;
 }
+
 @media (max-width:768px) {
   .hero-text {
     font-size: 20vw; /* Responsive font size */
