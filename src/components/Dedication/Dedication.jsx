@@ -1,14 +1,15 @@
 import React from "react";
 import "./Dedication.css";
+import test from "../../assets/tablet.jpg";
 
 const Dedication = () => {
   const images = [
-    { src: "https://via.placeholder.com/150", label: "運動前" },
-    { src: "https://via.placeholder.com/150", label: "運動中" },
+    { src: "https://placehold.jp/150x150.png", label: "運動前" },
+    { src: "https://placehold.jp/150x150.png", label: "運動中" },
   ];
 
   return (
-    <section className="dedication">
+    <section id="dedication">
       <div className="sec1">
         <div className="inner">
           <h2>このプロテインの摂取タイミング</h2>
@@ -89,27 +90,66 @@ const Dedication = () => {
           <div className="round-shape"></div>
         </div>
       </div>
-      <div className="section5">
+      <div className="sec5">
+        <div className="calcium-magnesium">
+          <div className="inner">
+            <div className="calcium-magnesium text">
+              <h5>③ 理想的なカルシウム＆マグネシウム</h5>
+              <p>
+                骨のためにはカルシウムさえ摂っていれば大丈夫…ではありません。
+                実はカルシウムと一緒にマグネシウムもバランスよく摂取しなくてはどんなにカルシウムだけを摂っても骨が強くなるどころか逆効果。
+                学術的に推奨されているのはカルシウム2～3に対して、マグネシウム1のバランスでの摂取です。NEXT-18
+                プロテインは、この２：１の黄金割合で配合されているので、効率的にカルシウムを補給できるシステムを構築しています。
+              </p>
+            </div>
+
+            <div className="calcium-magnesium img">
+              <img src="" alt="calcium image" />
+            </div>
+          </div>
+        </div>
+        <div className="calcium">
+          <div className="inner">
+            <div className="calcium text">
+              <h5>成長期に必要なカルシウム量 700mg~1,000mgが必要です！</h5>
+              <p>
+                カルシウムは骨となる以外にも、筋肉を働かせる役割も持っています。
+                カルシウムに拮抗して働くマグネシウムは、筋肉を緩める作用を持っています。 カルマグバランスが崩れると筋肉がうまくバランスを取ることができずに、痙攣や脚の攣り（つり）が起こりやすくなります。
+              </p>
+            </div>
+            <div className="calcium img">
+              <img src="" alt="calcium image" />
+            </div>
+          </div>
+        </div>
+        <div className="vitamind">
+          <div className="inner">
+            <div className="vitamind text">
+              <h5>ビタミンD</h5>
+              <p>
+                カルシウムは骨となる以外にも、筋肉を働かせる役割も持っています。
+                カルシウムに拮抗して働くマグネシウムは、筋肉を緩める作用を持っています。 カルマグバランスが崩れると筋肉がうまくバランスを取ることができずに、痙攣や脚の攣り（つり）が起こりやすくなります。
+              </p>
+            </div>
+            <div className="vitamind img">
+              <img src="" alt="calcium image" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="sec6">
         <div className="inner">
-            {/* First Paragraph */}
-            <div className="paragraph">
-                <div className="text centered">This is the centered text for the first paragraph.</div>
-                <div className="image round-image right-image" style={{ backgroundImage: 'url(your-image-url-here)' }} />
-            </div>
-
-            {/* Second Paragraph */}
-            <div className="paragraph">
-                <div className="text right">This is the right-aligned text for the second paragraph.</div>
-                <div className="image round-image left-image" style={{ backgroundImage: 'url(your-image-url-here)' }} />
-            </div>
-
-            {/* Third Paragraph */}
-            <div className="paragraph">
-                <div className="text left">This is the left-aligned text for the third paragraph.</div>
-                <div className="image round-image right-image" style={{ backgroundImage: 'url(your-image-url-here)' }} />
-            </div>
+          <div className="recommended-for-kids">
+            <h2>こんなキッズにお勧めです！</h2>
+            <p>
+              ・スポーツに取り組んでいる子供たちに <br />
+              ・勉強を頑張っている子供たちに <br />
+              ・偏食、または食が細く、栄養バランスが不安なお子様に <br />
+              ・スポーツと塾で忙しく食事をまともに取れないお子様に
+            </p>
+          </div>
         </div>
-        </div>
+      </div>
     </section>
   );
 };

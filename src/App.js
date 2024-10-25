@@ -17,10 +17,7 @@ function App() {
 
           </Routes>
         </main>
-        <div className="content">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel turpis ut justo bibendum dignissim. Nullam interdum, eros a feugiat dapibus, nisi dui ullamcorper libero, eu dignissim felis nunc non magna.</p>
-                <p style={{ height: '800px' }}>Scroll down to see the second footer.</p>
-            </div>
+
         <Footer />
       </div>
     </Router>

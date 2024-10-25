@@ -1,12 +1,12 @@
-.about-section {
+#about {
   background-color: #f0f0f0;
 }
 
-.about-section h1 {
+#about h1 {
   margin-bottom: 10px;
 }
 
-.about-section h4 {
+#about h4 {
   margin-bottom: 20px;
 }
 
