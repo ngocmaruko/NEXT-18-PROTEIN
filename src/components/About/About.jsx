@@ -25,7 +25,7 @@ const About = () => {
           </div>
           <div className="image-item">
             <p>
-              MTC <br /> オイル
+              MTCオイル
             </p>
             <div className="image-circle">
               <img src={tablet} alt="MTCオイル" />
@@ -45,6 +45,14 @@ const About = () => {
             </p>
             <div className="image-circle">
               <img src={tablet} alt="カルシウムマグネシウム" />
+            </div>
+          </div>
+          <div className="image-item">
+            <p>
+            ビタミンD
+            </p>
+            <div className="image-circle">
+              <img src={tablet} alt="ビタミンD" />
             </div>
           </div>
         </div>

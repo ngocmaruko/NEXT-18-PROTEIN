@@ -5,6 +5,8 @@ import Navbar from './components/Navbar/Navbar';
 import HomePage from './pages/HomePage/HomePage';
 import './App.css';
 import Footer from './components/Footer/Footer';
+import Team from './pages/Team/Team';
+import BackToTop from './components/BackToTop/BackToTop';
 
 function App() {
   return (
@@ -14,11 +16,17 @@ function App() {
         <main> {/* Wrap the Routes in a main tag */}
           <Routes>
             <Route path="/" element={<HomePage />} /> 
-
+            <Route path='/team' element={<Team />} />
           </Routes>
+         <div>
+          <br />
+          <br />
+          <br />
+         </div>
         </main>
 
         <Footer />
+        <BackToTop />
       </div>
     </Router>
   );

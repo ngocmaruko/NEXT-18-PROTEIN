@@ -7,7 +7,6 @@
   display: flex;
   flex-direction: column; /* Stack header and images vertically */
   align-items: center; /* Center items horizontally */
-
 }
 
 .sec1-img {
@@ -20,7 +19,9 @@
 
 .image-wrapper {
   padding: 10px;
-  text-align: center; /* Center the label below the image */
+}
+.image-wrapper p{
+  text-align: center;
 }
 
 .round-image {
@@ -254,5 +255,6 @@
 }
 .recommended-for-kids p{
   margin-top: 30px;
+  line-height: 3;
 }
 

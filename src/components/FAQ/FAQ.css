@@ -1,0 +1,9 @@
+.faq{
+  background-color: #f0f0f0;
+  margin: 20px 0;
+  padding: 30px 0;
+}
+.faq p {
+  text-align: center;
+  padding: 0 20px;
+}

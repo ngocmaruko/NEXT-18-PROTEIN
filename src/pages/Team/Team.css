@@ -1,0 +1,123 @@
+.sponsorship-sec1, .testimonial .inner, .advice-content{
+  display: flex;
+  padding: 30px auto;
+}
+.sponsorship-sec1-text, .testimonial-text, .advice-text {
+  flex: 1;
+  padding-right: 50px; /* Adjust padding */
+  text-align: left;
+}
+
+.sponsorship-sec1-img, .testimonial-img, .advice-img {
+    width: 100%; /* Use percentage */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 400px; /* Optional max width */
+  }
+  .sponsorship-sec1-img img, .testimonial-img img, .advice-img img{
+    width: 100%; /* Image takes full width of its parent */
+    height: auto; /* Adjust height to maintain aspect ratio */
+    object-fit: cover; /* Ensures the image covers the container */
+}
+.sponsorship-sec1-text span, .testimonial-text span, .advice-text span {
+  display: flex; /* Enables flexbox */
+  justify-content: flex-end;
+}
+.sponsorship-sec1-text span h5, .testimonial-text span h5, .advice-text span h5{
+  text-align: center;
+}
+@media (max-width:768px) {
+  .sponsorship-sec1, .testimonial .inner, .advice-content{
+    flex-direction: column;
+    align-items: center;
+  }
+  .sponsorship-sec1-text, .testimonial-text, .advice-text{
+    padding: 0;
+  }
+}
+
+.sponsorship-sec2{
+  background-color: #f0f0f0;
+}
+.sponsorship-part{
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  position: relative; /* Enable positioning for children */
+}
+.sponsorship-part-text{
+  padding: 30px;
+  flex: 1;
+}
+.sponsorship-part-image{
+  width: 100%;
+  height: auto;
+  max-width: 400px;
+}
+.sponsorship-part-image img{
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.reverse{
+  flex-direction: row-reverse;
+}
+.reverse .sponsorship-part-text{
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translate(0, -50%);
+  
+}
+.reverse .sponsorship-part-image{
+  max-width: 700px;
+  height: 300px;
+  overflow: hidden;
+}
+@media (max-width:768px) {
+  .sponsorship-part{
+    flex-direction: column-reverse;
+  }
+  .reverse .sponsorship-part-text{
+    position: static;
+    margin: 0;
+    transform: none;
+  }
+}
+
+/*sponsership-sec3*/
+.sponsorship-sec3{
+  text-align: center;
+  padding: 60px 0;
+}
+.sponsorship-sec3 .inner{
+  padding: 30px 0;
+}
+.soccer, .futsal{
+  display: flex;
+  justify-content: space-between;
+}
+.volleyball{
+  display: flex;
+  justify-content: center;
+}
+.sponsorship-sec3 h4{
+  background-color: #f0f0f0;
+}
+.sponsorship-sec3 h2{
+  padding: 30px 0;
+}
+.sponsorship-sec3 li{
+  line-height: 3;
+}
+.futsal-teams:nth-child(3n){
+  padding-left:-30px ;
+}
+@media (max-width: 768px) {
+  .soccer, .futsal{
+    flex-direction: column;
+    align-items: center;
+  }
+  .soccer .inner{
+    padding: 0;
+  }
+}

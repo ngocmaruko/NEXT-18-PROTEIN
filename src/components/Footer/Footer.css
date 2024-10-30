@@ -29,6 +29,9 @@
   height: 40px;
   cursor: pointer;
   font-weight: 550;
+  height: 50px;
+  min-width: 200px;
+  margin: 0 20px;
 }
 
 .footer-button:hover {
@@ -55,13 +58,10 @@
   transition: opacity 0.5s ease, transform 0.5s ease; /* Transition for smooth appearance */
   z-index: 20;
 }
-
 .footer-scroll.visible {
   opacity: 1; /* Fully visible */
   transform: translateY(0); /* Move to original position */
 }
-
-
 .footer-scroll-content {
   display: flex;
   justify-content: flex-end; /* Align items to the right */
@@ -70,4 +70,18 @@
 
 .footer-scroll-item {
   cursor: pointer; /* Change cursor to pointer */
+}
+@media (max-width:768px) {
+  .footer-content{
+    flex-direction: column;
+    gap: 0;
+  }
+  .footer-button{
+    height: 50px;
+    min-width: 150px;
+    margin: 15px;
+  }
+  .footer-scroll{
+    display: none;
+  }
 }

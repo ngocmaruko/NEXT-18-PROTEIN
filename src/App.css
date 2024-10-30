@@ -6,6 +6,7 @@
 
 main {
   flex: 1; /* This allows the main content to expand and take available space */
+  margin-bottom: 100px;
 }
 
   

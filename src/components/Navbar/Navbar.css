@@ -63,12 +63,7 @@
 /* Hamburger Menu */
 .menu-toggle {
   display: none;
-  font-size: 24px;
-  cursor: pointer;
-  position: absolute;
-  right: 20px;
-  top: 40px;
-  color: #FFFFFF;
+
 }
 
 .menu li {
@@ -83,7 +78,9 @@
   font-size: 20px; /* Larger font size for readability */
 }
 
-/* Media Queries for Mobile */
+.nav-sp{
+  display: none;
+}
 @media (max-width: 768px) {
   .navbar-container {
     justify-content: center; /* Center content in mobile view */
@@ -101,6 +98,12 @@
   }
   .menu-toggle {
     display: flex; /* Show hamburger icon on mobile */
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 40px;
+    color: #FFFFFF;
   }
   .menu.active {
     display: block;
@@ -117,4 +120,8 @@
   .menu li a {
     font-size: 1.2em;
   }
+  .nav-sp{
+    display: block;
+  }
+
 }

@@ -1,0 +1,15 @@
+.testimonials{
+  text-align: center;
+}
+.testimonial {
+  padding: 30px 0;
+}
+/* Background color for odd testimonials (1st, 3rd, etc.) */
+.testimonial:nth-child(odd) {
+  background-color: #f0f0f0;
+}
+
+/* No background color for even testimonials (2nd, 4th, etc.) */
+.testimonial:nth-child(even) {
+  background-color: transparent;
+}
