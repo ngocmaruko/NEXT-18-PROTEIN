@@ -1,8 +1,9 @@
 // src/components/FooterScroll.jsx
 import React, { useEffect, useState } from 'react';
 import './Footer.css';
+import {Link} from 'react-router-dom';
 
-const FooterScroll = () => {
+const FooterScroll = ({instaIcon}) => {
     const [isVisible, setIsVisible] = useState(false);
     const [footerHeight, setFooterHeight] = useState(50); // Default height
 
@@ -28,10 +29,18 @@ const FooterScroll = () => {
     return (
         <footer className={`footer-scroll ${isVisible ? 'visible' : ''}`} style={{ bottom: `${footerHeight}px` }}>
             <div className="footer-scroll-content">
-                <span className="footer-scroll-item">会社情報</span>
-                <span className="footer-scroll-item">お問い合わせ</span>
-                <span className="footer-scroll-item">プライバシーポリシー</span>
-                <span className="footer-scroll-item instagram-icon">📷</span> {/* Use an icon here */}
+                <span className="footer-scroll-item">
+                    <Link to="/about">会社情報</Link>
+                </span>
+                <span className="footer-scroll-item">
+                    <Link to="/contact">お問い合わせ</Link>
+                </span>
+                <span className="footer-scroll-item">
+                <Link to="/policy">プライバシーポリシー</Link>
+                </span>
+                <span className="footer-scroll-item instagram-icon">
+                <Link to="https://www.instagram.com/hongo3_official/" target='_blank'><img src={instaIcon} alt="" /></Link>
+                </span> {/* Use an icon here */}
             </div>
         </footer>
     );

@@ -71,15 +71,19 @@
 .footer-scroll-item {
   cursor: pointer; /* Change cursor to pointer */
 }
+
 @media (max-width:768px) {
   .footer-content{
     flex-direction: column;
     gap: 0;
   }
+  .footer-buttons{
+    display: flex;
+  }
   .footer-button{
     height: 50px;
     min-width: 150px;
-    margin: 15px;
+    margin: 5px 15px;
   }
   .footer-scroll{
     display: none;

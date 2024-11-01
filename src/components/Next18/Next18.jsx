@@ -1,10 +1,10 @@
 import React from "react";
-import "./About.css"; // Import the CSS file for styling
+import "./Next18.css"; // Import the CSS file for styling
 import tablet from "../../assets/tablet.jpg";
 
-const About = () => {
+const Next18 = () => {
   return (
-    <section id="about">
+    <section id="next18">
       <div className="inner">
         <h1>NEXT-18PROTEIN</h1>
         <h4>スクスク伸びる成長期のカラダに必要な栄養素をシッカリ配合！</h4>
@@ -61,4 +61,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Next18;

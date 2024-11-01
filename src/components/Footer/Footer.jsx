@@ -3,10 +3,10 @@ import React from 'react';
 import FooterFixed from './FooterFixed'; // Import the fixed footer component
 import FooterScroll from './FooterScroll'; // Import the scroll footer component
 
-const Footer = () => {
+const Footer = ({instaIcon}) => {
     return (
         <>
-            <FooterScroll />
+            <FooterScroll instaIcon={instaIcon}/>
             <FooterFixed />
         </>
     );

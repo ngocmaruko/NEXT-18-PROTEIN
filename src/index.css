@@ -57,7 +57,10 @@ p {
   line-height: 1.6;
 }
 
-
+a {
+  text-decoration: none;
+  color: #333;
+}
 
 /* ==================================
    List Styles

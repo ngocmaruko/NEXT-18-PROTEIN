@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom'; // Import useLocation for accessing the current URL
 import Splash from '../../components/Splash/Splash';
 import Hero from '../Hero/Hero';
-import About from '../../components/About/About';
+import Next18 from '../../components/Next18/Next18';
 import Dedication from '../../components/Dedication/Dedication';
 import Safety from '../../components/Safety/Safety';
 import ProductLine from '../../components/ProductLine/ProductLine';
@@ -29,7 +29,7 @@ const HomePage = () => {
     <>
       {showSplash && <Splash />} {/* Render Splash only when pathname is '/' and no hash */}
       <Hero />
-      <About />
+      <Next18 />
       <Dedication />
       <Safety />
       <ProductLine />

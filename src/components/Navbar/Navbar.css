@@ -1,6 +1,6 @@
 .navbar {
   display: flex;
-  justify-content: center; /* Center the content horizontally */
+  justify-content: center;
   align-items: center;
   padding: 12px 0;
   background-color: #DC3707;
@@ -11,34 +11,27 @@
   position: relative;
   z-index: 2;
 }
-
 .navbar-container {
   display: flex;
-  justify-content: space-between; /* Aligns logo to the left and menu to the right */
+  justify-content: space-between;
   align-items: center;
   width: 100%;
   margin: 0 auto; /* Center the content within the navbar */
-  padding: 0 20px; /* Add padding to give space on the sides */
+  padding: 0 20px;
 }
 
-/* Rest of your styles */
-
-
-/* Logo */
 .logo img {
   width: 150px;
   margin-left: 30px; /* Added margin to separate logo from the edge */
   margin-bottom: 0; /* Removed bottom margin to avoid extra space */
 }
-
-/* Menu List */
 .menu {
   list-style: none;
   padding: 0;
   margin: 0;
   display: flex;
   gap: 15px;
-  justify-content: flex-end; /* Aligns menu items to the right */
+  justify-content: flex-end;
   align-items: center;
 }
 
@@ -50,13 +43,13 @@
 
 .menu li a {
   text-decoration: none;
-  color: #FFFFFF; /* White text color */
+  color: #FFFFFF;
   transition: color 0.3s, transform 0.3s;
-  padding: 10px 15px; /* Padding around the text */
+  padding: 10px 15px;
 }
 
 .menu li a:hover {
-  color: #FFEB3B; /* Change to your preferred hover color */
+  color: #FFEB3B;
   transform: scale(1.1); /* Slightly enlarge on hover */
 }
 
@@ -82,6 +75,14 @@
   display: none;
 }
 @media (max-width: 768px) {
+  .navbar {
+    position: fixed; /* Fixes the navbar to the top */
+    top: 0; /* Positions it at the top of the viewport */
+    left: 0; /* Aligns it to the left */
+    right: 0; /* Ensures it stretches across the screen */
+    z-index: 1000; /* Keeps it above other content */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Adds shadow for depth */
+  }
   .navbar-container {
     justify-content: center; /* Center content in mobile view */
   }
@@ -124,4 +125,15 @@
     display: block;
   }
 
+}
+ul.company-info{
+  background-color: #fff;
+}
+ul.company-info li {
+  border-bottom: 0.5px dotted black;
+  width: 50%;
+  margin: 0 auto;
+}
+ul.company-info a{
+  color:#000;
 }
