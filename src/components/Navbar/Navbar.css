@@ -74,6 +74,58 @@
 .nav-sp{
   display: none;
 }
+
+@media (min-width: 768px) and (max-width: 1180px) {
+  .navbar {
+    position: fixed; /* Fixes the navbar to the top */
+    top: 0; /* Positions it at the top of the viewport */
+    left: 0; /* Aligns it to the left */
+    right: 0; /* Ensures it stretches across the screen */
+    z-index: 1000; /* Keeps it above other content */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Adds shadow for depth */
+  }
+  .navbar-container {
+    justify-content: center; /* Center content in mobile view */
+  }
+
+  .logo {
+    margin: 0 auto; /* Center the logo */
+    order: 1; /* Ensure the logo appears first (above menu toggle) */
+  }
+  .logo img{
+    margin-left: 0;
+  }
+  .menu {
+    display: none;
+  }
+  .menu-toggle {
+    display: flex; /* Show hamburger icon on mobile */
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 40px;
+    color: #FFFFFF;
+  }
+  .menu.active {
+    display: block;
+    position: absolute;
+    top: 100%; /* Aligns the menu right below the navbar */
+    right: 0;
+    width: 100%;
+    background: linear-gradient(to right, #ec7700 0%, #ce000e 100%);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Same shadow as navbar */
+    transition: max-height 0.3s ease-in-out;
+    overflow: hidden; /* Hide overflow */
+  }
+  .menu li a {
+    font-size: 1.2em;
+  }
+  .nav-sp{
+    display: block;
+  }
+}
+
 @media (max-width: 768px) {
   .navbar {
     position: fixed; /* Fixes the navbar to the top */
@@ -116,7 +168,7 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Same shadow as navbar */
     transition: max-height 0.3s ease-in-out;
     overflow: hidden; /* Hide overflow */
-    max-height: 500px; /* Adjust to fit menu items; ensure it's enough to show all items */
+    max-height: 100vh; /* Adjust to fit menu items; ensure it's enough to show all items */
   }
   .menu li a {
     font-size: 1.2em;
@@ -133,6 +185,10 @@ ul.company-info li {
   border-bottom: 0.5px dotted black;
   width: 50%;
   margin: 0 auto;
+}
+ul.company-info li:last-child{
+  border-bottom: none;
+
 }
 ul.company-info a{
   color:#000;

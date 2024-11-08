@@ -55,13 +55,13 @@
 /*sec2*/
 .triangle {
   position: absolute;
-  top: 17%;
+  top: 18%;
   left: 50%;
   transform: translateX(-50%);
   height: calc(100px / 2 * tan(60deg));
   width: 100px;
   clip-path: polygon(50% 0, 100% 100%, 0 100%);
-  background-color: white; /* Triangle color */
+  background-color: white;
 
 }
 
@@ -93,15 +93,23 @@
   margin-bottom: 40px;
   font-size: 0.8em;
 }
-
+.growth-nutrients{
+  margin-top: 60px;
+}
+.arrow-down img {
+ width: 10%;
+}
 /*sec4*/
 .sec4 {
-  padding: 50px 0;
+  padding: 60px 0;
 }
 
 .mct-oil {
   position: relative; /* Positioning for z-index */
   z-index: 1; /* Bring the text above the round shape */
+}
+.mct-oil span{
+  font-size: 1.9rem;
 }
 
 .round-shape {
@@ -124,7 +132,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px) and (max-width: 1024px)  {
   .round-shape {
       position: static;
       margin: 20px auto 0;
@@ -132,6 +140,15 @@
       width: 230px;
       height: 230px;
   }
+}
+@media (min-width: 820px) and (max-width: 1180px) {
+  .round-shape {
+    position: static;
+    margin: 20px auto 0;
+    display: block;
+    width: 330px;
+    height: 330px;
+}
 }
 
 /* sec5 */
@@ -222,6 +239,31 @@
     border-radius: 50%;
   }
 }
+@media (min-width: 768px) and (max-width: 1180px) {
+  .sec5 .inner, .sec7 .inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+  }
+
+  .sec5 .img, .sec7 .img {
+    position: relative;
+    left: 0;
+    top: auto;
+    transform: none;
+    margin: 20px 0;
+    width: 330px;
+    height: 330px;
+  }
+
+
+  .sec5 .text, .sec7 .text {
+    max-width: 100%;
+    text-align: center;
+  }
+}
+
 @media (max-width: 768px) {
   .sec5 .inner, .sec7 .inner {
     display: flex;

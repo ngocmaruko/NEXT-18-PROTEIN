@@ -12,15 +12,14 @@ const Team = () => {
         <div className="inner">
           <h1>協賛・導入チーム</h1>
           <h4>勉強もスポーツも頑張る子供を応援します！</h4>
-          <div className="sponsorship-sec1">
+          <div className="sponsorship-sec1-inner">
             <div className="sponsorship-sec1-text">
-              <h5>運動も勉強も頑張るキッズにオススメ！</h5>
+              <h5>運動も勉強も頑張る <br /> ジュニア世代にオススメ！</h5>
               <br />
               <p>
                 フットサルは、体が激しくぶつかり合うことが多いスポーツです。競り合いで倒されたりすることも日常茶飯事の為、“当たり負けしないカラダづくり”の為にも、日々の食事への配慮は欠かせません。
                 <br />
-                NEXT-18
-                PROTEINは、プロテインなどの「タンパク質」以外にも、カラダづくりに欠かせない豊富な栄養素が含まれています。爽やかなヨーグルトテイストで、疲れきったトレーニング後でもとても飲みやすい味です。運動も勉強も頑張るキッズ達にお勧めしたいです！
+                NEXT-18 PROTEINは、プロテインなどの「タンパク質」以外にも、カラダづくりに欠かせない豊富な栄養素が含まれています。爽やかなヨーグルトテイストで、疲れきったトレーニング後でもとても飲みやすい味です。運動も勉強も頑張るジュニア世代にお勧めしたいです！
               </p>
               <br />
               <span>
@@ -93,10 +92,10 @@ const Team = () => {
           <div className="inner">
           <div className="futsal">
             <ul className="futsal-teams">
-              <li>レガーレヴィア葛飾</li>
+              <li>リガーレヴィア葛飾</li>
             </ul>
             <ul className="futsal-teams">
-              <li>レガーレTokyp NEXT</li>
+              <li>リガーレTokyp NEXT</li>
             </ul>
             <ul className="futsal-teams">
               <li>FC.A.W.J</li>
@@ -107,6 +106,12 @@ const Team = () => {
           <div className="inner">
           <div className="volleyball">
             <p>愛工大名電 ※</p>
+          </div>
+        </div>
+        <h4>バスケットボール</h4>
+          <div className="inner">
+          <div className="basketball">
+            <p>國學院大學久我山高等学校 バスケットボール部</p>
           </div>
         </div>
       </div>

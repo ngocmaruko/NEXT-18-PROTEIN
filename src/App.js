@@ -19,7 +19,7 @@ function App() {
     <Router>
       <div className="App">
         <Navbar instaIcon={instaIcon} />
-        <main> {/* Wrap the Routes in a main tag */}
+        <main>
           <Routes>
             <Route path="/" element={<HomePage />} /> 
             <Route path='/team' element={<Team />} />

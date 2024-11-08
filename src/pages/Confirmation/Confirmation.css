@@ -7,17 +7,6 @@
   align-items: center; /* Center align items */
 }
 
-h2 {
-  text-align: center;
-  margin: 10px 0;
-}
-
-h3 {
-  text-align: center;
-  margin: 5px 0;
-  color: #555; /* Optional: color for the subtitle */
-}
-
 .confirmation-details {
   margin: 20px 0;
   padding: 20px;

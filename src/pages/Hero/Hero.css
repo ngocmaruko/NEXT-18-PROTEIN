@@ -2,7 +2,7 @@
   background-image: url('https://hongo3.co.jp/products/domestic/img/next_18protein/sec03_bg1.jpg'); /* Background image URL */
   background-size: cover; /* Cover the entire hero area */
   background-position: top; /* Center the image */
-  height: calc(100vh - 120px); /* Full viewport height minus the navbar height */
+  height: calc(100vh - 20px); /* Full viewport height minus the navbar height */
   display: flex; /* Use flexbox for centering text */
   justify-content: flex-start; /* Align items to the left */
   align-items: center; /* Center vertically */
@@ -49,6 +49,9 @@
 }
 
 @media (max-width:768px) {
+  .hero {
+    height: 100vh; /* Full viewport height */
+  }
   .hero-text {
     font-size: 20vw; /* Responsive font size */
   }

@@ -1,5 +1,6 @@
 import React from "react";
 import "./Safety.css";
+import safety2 from '../../assets/safety/safety2.png'
 
 const Safety = () => {
   return (
@@ -34,13 +35,12 @@ const Safety = () => {
             <div className="anti-doping text">
               <h5>アンチドーピングアクション</h5>
               <p>
-                WADA（世界アンチ・ドーピング機構）の規定するドーピング禁止リストなどをもとに、サプリメント等に混入する可能性の高いドーピング禁止物質をドーピングの専門家とともに選定しています。NEXT-18
-                PROTEINは分析済みを示すマーク「Anti Doping
-                Action」が付与されています。
+              WADA（世界アンチ・ドーピング機構）の規定するドーピング禁止リストなどをもとに、サプリメント等に混入する可能性の高いドーピング禁止物質を第三者機関にて試験分析をしております。<br />
+              NEXT-18 PROTEINはアスリートの方でも安心してお飲み頂くことができます。
               </p>
             </div>
             <div className="vitamind img">
-              <img src="" alt="calcium image" />
+              <img src={safety2} alt="calcium image" />
             </div>
           </div>
         </div>

@@ -11,7 +11,7 @@ const BackToTop = () => {
       const windowHeight = window.innerHeight;
       const fullHeight = document.documentElement.scrollHeight;
 
-      if (scrollPosition > 300 && scrollPosition + windowHeight < fullHeight - 100) {
+      if (scrollPosition > 300) {
         setShowBackToTop(true);
       } else {
         setShowBackToTop(false);

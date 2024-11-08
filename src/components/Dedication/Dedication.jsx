@@ -1,6 +1,7 @@
 import React from "react";
 import "./Dedication.css";
 import test from "../../assets/tablet.jpg";
+import downarrow from '../../assets/down-arrow.png'
 
 const Dedication = () => {
   const images = [
@@ -25,10 +26,10 @@ const Dedication = () => {
               </div>
             ))}
           </div>
-          <h5>
+          <h4>
             少ない量でもトレーニング前やトレーニング中に飲むことで <br />
             パフォーマンスやカラダづくりの向上に繋がります。
-          </h5>
+          </h4>
         </div>
       </div>
       <div className="sec2">
@@ -47,6 +48,15 @@ const Dedication = () => {
       </div>
       <div className="sec3">
         <div className="inner">
+          <div className="junior-digestion">
+            <h2>成人と比べ・・・ <br />
+              ジュニア世代は消化機能が弱い！</h2>
+              <div class="arrow-down"><img src={downarrow} alt="" /></div>
+              <h4>だから！</h4>
+              <h2>消化吸収が良いプロテインを
+              お勧めします。</h2>
+              <img src="https://placehold.jp/960x150.png" alt="" />
+          </div>
           <div className="growth-nutrients">
             <h4>スクスク伸びる成長期のカラダに必要な</h4>
             <h2>栄養素をシッカリ配合！</h2>
@@ -81,7 +91,7 @@ const Dedication = () => {
       <div className="sec4">
         <div className="inner">
           <div className="mct-oil">
-            <h4>② 不足しがちな成長期のエネルギーを補うMTCオイル</h4>
+            <h4>② 不足しがちな成長期のエネルギーを補う <span>MTCオイル</span></h4>
             <p>
               成長期の子供は、発育のための大量のエネルギーが必要なのに、消化・吸収の能力が未発達です。そのため、エネルギー価の高い油脂が大事です。MCT（中鎖脂肪酸）オイルは、「一般的な油脂に比べ消化・吸収が早く、エネルギーになりやすい」特長を持ちながら、
               カラダに蓄積されにくいという性質もあることから、スポーツを頑張る子供たちにも最適なエネルギー源として注目が集まる成分です。
@@ -94,7 +104,7 @@ const Dedication = () => {
         <div className="calcium-magnesium">
           <div className="inner">
             <div className="calcium-magnesium text">
-              <h5>③ 理想的なカルシウム＆マグネシウム</h5>
+              <h4>③ 理想的なカルシウム＆マグネシウム</h4>
               <p>
                 骨のためにはカルシウムさえ摂っていれば大丈夫…ではありません。
                 実はカルシウムと一緒にマグネシウムもバランスよく摂取しなくてはどんなにカルシウムだけを摂っても骨が強くなるどころか逆効果。
@@ -111,7 +121,7 @@ const Dedication = () => {
         <div className="calcium">
           <div className="inner">
             <div className="calcium text">
-              <h5>成長期に必要なカルシウム量 700mg~1,000mgが必要です！</h5>
+              <h4>成長期に必要なカルシウム量 700mg~1,000mgが必要です！</h4>
               <p>
                 カルシウムは骨となる以外にも、筋肉を働かせる役割も持っています。
                 カルシウムに拮抗して働くマグネシウムは、筋肉を緩める作用を持っています。 カルマグバランスが崩れると筋肉がうまくバランスを取ることができずに、痙攣や脚の攣り（つり）が起こりやすくなります。
@@ -125,7 +135,7 @@ const Dedication = () => {
         <div className="vitamind">
           <div className="inner">
             <div className="vitamind text">
-              <h5>ビタミンD</h5>
+              <h4>ビタミンD</h4>
               <p>
                 ビタミンDは、カルシウムの吸収を助ける大切なビタミンの一つです。
                 日光によっても生体内でビタミンＤを生成することができますが、
@@ -142,7 +152,7 @@ const Dedication = () => {
       <div className="sec6">
         <div className="inner">
           <div className="recommended-for-kids">
-            <h2>こんなキッズにお勧めです！</h2>
+            <h2>こんなジュニア世代にお勧めです！</h2>
             <p>
               ・スポーツに取り組んでいる子供たちに <br />
               ・勉強を頑張っている子供たちに <br />
