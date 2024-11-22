@@ -1,5 +1,4 @@
-
-/* First Footer (appears after scrolling 600px) */
+/* footer-fixed */
 .footer-fixed {
   position: fixed;
   left: 0;
@@ -8,20 +7,12 @@
   background: linear-gradient(to right, #ec7700 0%, #ce000e 100%);
   color: white;
   text-align: center;
-  padding: 12px 0;
+  padding: 12px 0; /* This contributes to the height */
   z-index: 10;
+  margin-top: 90px;
   opacity: 0; /* Initially hidden */
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
+  transition: opacity 0.5s ease-in-out, bottom 0.3s ease; /* Smooth transition for opacity and bottom */
 
-.footer-fixed.hidden {
-  opacity: 0;
-  transform: translateY(100%);
-}
-
-.footer-fixed.visible {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 .footer-content {
@@ -54,17 +45,40 @@
   font-size: 15px;
 }
 
-/* Second Footer (at the bottom of the page, not fixed) */
+/* Initially hide the footer when it's not needed */
+.footer-fixed.hidden {
+  opacity: 0; /* Ensure it's fully hidden */
+  pointer-events: none; /* Disable interactions when hidden */
+}
+
+.footer-fixed.stopped {
+  bottom: 46px; /* Stop at 50px from the bottom */
+}
+
+/* Show the footer when it's visible (i.e., after scroll reaches 600px) */
+.footer-fixed.visible {
+  opacity: 1; /* Make the footer visible */
+}
+
+/* Additional styles when scrolling up */
+.footer-fixed.scrolling-up {
+  transition: bottom 0.2s ease; /* Smooth transition when scrolling up */
+  bottom: 0; /* Footer moves back to the bottom */
+}
+/* footer-scroll */
 .footer-scroll {
   position: static; /* Use static instead of fixed */
   width: 100%;
   background: lightgrey;
   color: black;
   text-align: right;
-  padding: 30px;
+  padding: 10px;
   display: flex;
   justify-content: flex-end;
   gap: 20px;
+  z-index: 20;
+  transform: none; /* Remove transform effect */
+  transition: none; /* Remove transition effects */
 }
 
 .footer-scroll-content {
@@ -101,7 +115,6 @@
   .footer-scroll {
     display: none;
   }
-
   .footer-fixed.stopped {
     bottom: 0; /* Stop at 50px from the bottom */
   }

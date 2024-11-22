@@ -34,8 +34,9 @@ html, body {
   -moz-osx-font-smoothing: grayscale;
   font-size: 16px; /* Base font size */
   color: #333; /* Default text color */
-
+  scroll-behavior: smooth;
 }
+
 
 /* ==================================
    Typography - Headings, Paragraphs, and Links
@@ -52,6 +53,9 @@ h3 { font-size: 1.75rem; }
 h4 { font-size: 1.5rem;}
 h5 { font-size: 1.25rem; }
 h6 { font-size: 1rem; }
+
+h2 span { font-size: 1.5rem; }
+
 
 
 p {

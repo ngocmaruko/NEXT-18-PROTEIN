@@ -1,6 +1,5 @@
 import React from "react";
 import "./Dedication.css";
-import test from "../../assets/tablet.jpg";
 import downarrow from '../../assets/down-arrow.png'
 
 const Dedication = () => {

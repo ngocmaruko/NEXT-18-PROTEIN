@@ -6,9 +6,6 @@
   margin-bottom: 10px;
 }
 
-#next18 h4 {
-  margin-bottom: 20px;
-}
 #next18 p {
   text-align: center  ;
 }
@@ -59,4 +56,36 @@
     height: 140px;
     
   }
+}
+
+/*nutrition-compliant*/
+.compliant1{
+  display: flex;
+  gap: 30px;
+}
+#next18 .compliant1 p{
+  text-align: left;
+}
+.calcium, .magnesium, .compliant2{
+  background-color: #fff;
+  padding: 30px 20px;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+.trusted-quality{
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  margin-top: 60px;
+}
+.trusted-quality-text p{
+  border: 1px solid #000;
+  padding: 30px 20px;
+  margin-top: 60px;
+}
+.trusted-quality-text, .trusted-quality-img{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between
+
 }

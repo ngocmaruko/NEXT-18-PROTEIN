@@ -1,50 +1,44 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
-import "./Navbar.css";
-import logo from "../../assets/logo.png";
+import "./Navbar1.css";
 import { FaBars, FaTimes } from "react-icons/fa";
 
-const Navbar = ({ instaIcon }) => {
+const Navbar1 = ({ instaIcon, logo }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
-  const navbarRef = useRef(null); // Create a ref for the Navbar
+  const navbarRef = useRef(null);
 
   const toggleMenu = () => {
     setIsMenuOpen((prevState) => !prevState);
   };
 
-  // Close the menu when clicking outside of it
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (navbarRef.current && !navbarRef.current.contains(event.target)) {
-        setIsMenuOpen(false); // Close the menu
+        setIsMenuOpen(false);
       }
     };
 
-    // Attach the click event listener
     document.addEventListener("mousedown", handleClickOutside);
-    
+
     return () => {
-      // Cleanup the event listener
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
 
-  // Close the menu when the location changes to the homepage
   useEffect(() => {
     if (location.pathname === "/") {
-      setIsMenuOpen(false); // Close the menu
+      setIsMenuOpen(false);
     }
   }, [location]);
 
   return (
     <header className="navbar" ref={navbarRef}>
-      <div className="navbar-container">
         <div className="logo">
-          <Link to="/">
+          <a href="/">
             <img src={logo} alt="Logo" />
-          </Link>
+          </a>
         </div>
         <div
           className="menu-toggle"
@@ -70,9 +64,7 @@ const Navbar = ({ instaIcon }) => {
                 NEXT18について
               </HashLink>
             ) : (
-              <HashLink smooth to="/#next18">
-                NEXT18について
-              </HashLink>
+              <a href="/#next18">NEXT18について</a>
             )}
           </li>
           <li>
@@ -81,9 +73,7 @@ const Navbar = ({ instaIcon }) => {
                 こだわり
               </HashLink>
             ) : (
-              <HashLink smooth to="/#dedication">
-                こだわり
-              </HashLink>
+              <a href="/#dedication">こだわり</a>
             )}
           </li>
           <li>
@@ -92,9 +82,7 @@ const Navbar = ({ instaIcon }) => {
                 安心・安全
               </HashLink>
             ) : (
-              <HashLink smooth to="/#safety">
-                安心・安全
-              </HashLink>
+              <a href="/#safety">安心・安全</a>
             )}
           </li>
           <li>
@@ -103,38 +91,38 @@ const Navbar = ({ instaIcon }) => {
                 商品ラインナップ
               </HashLink>
             ) : (
-              <HashLink smooth to="/#productline">
-                商品ラインナップ
-              </HashLink>
+              <a href="/#productline">商品ラインナップ</a>
             )}
           </li>
           <li>
-            <Link to="/team">協賛・導入チーム</Link>
+              <a href="/team">協賛・導入チーム</a>
           </li>
-          {isMenuOpen && (
+    
             <li className="nav-sp">
               <ul className="company-info">
                 <li>
-                  <Link to="/about">会社情報</Link>
+                  <a href="/about">会社情報</a>
                 </li>
                 <li>
-                  <Link to="/privacy">プライバシーポリシー</Link>
+                  <a href="/privacy">プライバシーポリシー</a>
                 </li>
                 <li>
-                  <Link to="/contact">お問い合わせ</Link>
+                  <a href="/contact">お問い合わせ</a>
                 </li>
                 <li>
-                  <Link to="https://www.instagram.com/hongo3_official/" target="_blank">
+                  <a
+                    href="https://www.instagram.com/hongo3_official/"
+                    target="_blank"
+                  >
                     <img src={instaIcon} alt="インスタグラム" />
-                  </Link>
+                  </a>
                 </li>
               </ul>
             </li>
-          )}
+ 
         </ul>
-      </div>
     </header>
   );
 };
 
-export default Navbar;
+export default Navbar1;

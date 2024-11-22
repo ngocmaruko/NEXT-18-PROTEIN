@@ -1,0 +1,160 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 30px 20px;
+  position: relative;
+  background-color: #dc3707;
+  background: linear-gradient(to right, #ec7700 0%, #ce000e 100%);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+
+.logo img {
+  width: 150px;
+  margin-left: 30px;
+  margin-bottom: 0;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.menu li {
+  font-size: 1em;
+  font-weight: bold;
+  position: relative;
+}
+
+
+.menu li a {
+  text-decoration: none;
+  color: #ffffff;
+  transition: color 0.3s, transform 0.3s;
+  position: relative; 
+  font-weight: bold;
+  font-size: 1.3rem;
+  padding: 5px 0;
+}
+
+
+.menu li a:hover {
+  color: #ffeb3b;
+  transform: scale(1.1);
+}
+
+.menu .nav-sp a {
+  color: #000;
+}
+
+.hamburger {
+  display: none;
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  flex-direction: column;
+  gap: 6px;
+  z-index: 10;
+}
+
+.bar {
+  background-color: #fff;
+  border-radius: 5px;
+  height: 4px;
+  transition: all 0.4s ease-in-out;
+  width: 25px;
+}
+
+.hamburger.open .bar:first-child {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.open .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open .bar:nth-child(3) {
+  transform: translateY(-12px) rotate(-45deg);
+}
+
+.nav-sp {
+  display: none;
+  padding: 0;
+}
+
+.company-info {
+  background-color: #fff;
+}
+
+.company-info li {
+  border-bottom: 0.5px dotted black;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.company-info li:last-child {
+  border-bottom: none;
+}
+
+.company-info a {
+  color: #000;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  }
+  nav > ul li a {
+    font-size: 1rem;
+  }
+
+  .logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #dc3707;
+    background: linear-gradient(to right, #ec7700 0%, #ce000e 100%);
+    overflow: hidden;
+    display: block;
+    max-height: 0;
+    transition: max-height 0.4s ease-in-out;
+    text-align: center;
+  }
+  .logo img {
+    width: 130px;
+    margin-left: 0px;
+  }
+
+  .menu .nav-sp {
+    padding: 0;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .menu.active {
+    max-height: 100vh;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .nav-sp {
+    display: block;
+  }
+}

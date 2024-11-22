@@ -6,7 +6,7 @@
 }
 .sponsorship-sec1-text, .testimonial-text, .advice-text {
   flex: 1;
-  padding-right: 50px; /* Adjust padding */
+  padding-right: 50px;
   text-align: left;
 }
 

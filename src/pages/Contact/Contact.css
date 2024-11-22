@@ -6,9 +6,11 @@
   flex-direction: column;
 }
 
-h2 {
+.contact-form h2 {
   text-align: center;
-  margin: 10px 0;
+  background: linear-gradient(to right,#ec7700 0%,#ce000e 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 h3 {

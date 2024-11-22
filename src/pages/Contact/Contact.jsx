@@ -110,8 +110,6 @@ const Contact = () => {
             required
           />
         </div>
-
-
         <button type="submit">次へ</button>
       </form>
     </section>
