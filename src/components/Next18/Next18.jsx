@@ -75,11 +75,10 @@ const Next18 = () => {
           <h2>
             NEXT-18PROTEIN <span>は</span>
           </h2>
-          <h4>厚生労働省が定める基準を満たした <br />
-          <span className="highline">
-            栄養機能食品</span>です
+          <h4>
+            厚生労働省が定める基準を満たした <br />
+            <span className="highline">栄養機能食品</span>です
           </h4>
-          
 
           <div className="next18__nutrition-compliant-calcium-magnesium">
             <div className="next18__nutrition-compliant-calcium">
@@ -99,7 +98,8 @@ const Next18 = () => {
           <div className="next18__nutrition-compliant-vitamin-d">
             <h4>ビタミンD</h4>
             <p>
-              発育や発達に影響する、骨を強くしたり、筋肉をつくるのに必要な要素です。<br />
+              発育や発達に影響する、骨を強くしたり、筋肉をつくるのに必要な要素です。
+              <br />
               日光を浴びることでも体内で生成できます。
             </p>
           </div>
@@ -107,13 +107,18 @@ const Next18 = () => {
           <div className="next18__nutrition-compliant-trusted-quality">
             <div className="next18__nutrition-compliant-trusted-quality-text">
               <h5>
-                NEXT-18 PROTEINは、<br />
-                成長期のお子様に安心して摂取できるよう、<br />
-                <span className="highline">第三者機関で成分を分析</span>し、<br />
+                NEXT-18 PROTEINは、
+                <br />
+                成長期のお子様に安心して摂取できるよう、
+                <br />
+                <span className="highline">第三者機関で成分を分析</span>し、
+                <br />
                 パッケージに栄養成分を表記しています。
               </h5>
-              <p>カルシウム 540mg / マグネシウム 258mg / <br />
-                 ビタミンD 3.6μg</p>
+              <p>
+                カルシウム 540mg / マグネシウム 258mg / <br />
+                ビタミンD 3.6μg
+              </p>
             </div>
             <div className="next18__nutrition-compliant-trusted-quality-img">
               <img src="/img/seiseki.png" alt="検査成績書" />

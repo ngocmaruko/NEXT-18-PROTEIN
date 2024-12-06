@@ -1,0 +1,156 @@
+/*page content*/
+
+
+.subpage {
+  background: url("/img/contact_bg.jpg") no-repeat center/cover;
+}
+
+/* 問い合わせ */
+
+.subpage-ctn {
+  max-width: 90%;
+  width: 960px;
+  margin: 0 auto;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  color: #000;
+}
+.p-title{
+  padding-top: 90px;
+}
+.p-title__ja {
+  display: block;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+.c-form {
+  padding: 0 50px;
+}
+.c-des {
+  position: relative;
+  text-align: center;
+  margin: 30px 0;
+}
+.c-des.complete {
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+hr {
+  height: 1px;
+  border: none;
+  border-top: 1px #eb6100 solid;
+  margin-bottom: 60px;
+}
+
+.c-form__row {
+  margin-bottom: 60px;
+}
+
+.c-form__label {
+  color: #333;
+  font-weight: 600;
+  flex-basis: 30%;
+}
+.c-form__cnt {
+  flex-basis: 70%;
+  width: 100%;
+  margin-top: 30px;
+}
+.c-form__cnt input,
+.c-form__cnt textarea {
+  border: none;
+  width: 100%;
+  padding: 20px;
+  background: #f0f0f0;
+}
+.c-form__cnt textarea {
+  width: 100%;
+  min-height: 80px;
+  resize: vertical;
+}
+
+.c-btn {
+  position: relative;
+  text-align: center;
+}
+.c-btn__ctn {
+  display: inline-block;
+  background: linear-gradient(90deg, #ec7700 0, #ce000e);
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  flex: 1 1;
+  height: 50px;
+  min-width: 200px;
+  padding: 10px;
+  transition: background 0.3s ease;
+}
+
+.c-btn__ctn:hover {
+  background: linear-gradient(90deg, #ce000e 0, #ec7700);
+}
+
+.required {
+  margin: 0 15px 0 0;
+  padding: 3px 5px;
+  background: #ce000e;
+  font-size: 12px;
+  font-size: 0.8rem;
+  line-height: 1;
+  color: #fff;
+  text-indent: 0.1rem;
+  letter-spacing: 1px;
+  letter-spacing: 0.1rem;
+}
+.not-required {
+  margin: 0 15px 0 0;
+  padding: 3px 5px;
+  background: #bfbfbf;
+  font-size: 12px;
+  font-size: 0.8rem;
+  line-height: 1;
+  color: #fff;
+  text-indent: 0.1rem;
+  letter-spacing: 1px;
+  letter-spacing: 0.1rem;
+}
+
+.c-form__consent {
+  position: relative;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.site-footer {
+  margin-top: auto; /* Push the footer to the bottom of the flex container */
+}
+@media (max-width: 768px) {
+  .c-form__row {
+    flex-direction: column;
+    align-items: start;
+    gap: 24px;
+  }
+  .required {
+    font-size: 0.6rem;
+  }
+  .c-form__cnt input,
+  .c-form__cnt textarea {
+    width: 100%; /* Make sure both input and textarea take up the full available width */
+  }
+}
+
+/* reCAPTCHA */
+.grecaptcha-badge {
+  bottom: 150px !important;
+}
+@media (max-width: 768px) {
+  .grecaptcha-badge {
+    bottom: 14px !important;
+  }
+}

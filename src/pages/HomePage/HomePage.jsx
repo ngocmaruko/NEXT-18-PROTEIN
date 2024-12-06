@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
-import { useLocation } from 'react-router-dom'; // Import useLocation for accessing the current URL
+import './HomePage.css'
+import { useLocation } from 'react-router-dom'; 
 import Splash from '../../components/Splash/Splash';
 import Hero from '../Hero/Hero';
 import Next18 from '../../components/Next18/Next18';
@@ -26,14 +27,14 @@ const HomePage = () => {
   const showSplash = location.pathname === '/' && !location.hash;
 
   return (
-    <>
+    <section className='l-body'>
       {showSplash && <Splash />} {/* Render Splash only when pathname is '/' and no hash */}
       <Hero />
       <Next18 />
       <Dedication />
       <Safety />
       <ProductLine />
-    </>
+    </section>
   );
 };
 

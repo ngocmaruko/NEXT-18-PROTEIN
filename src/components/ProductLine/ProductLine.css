@@ -1,5 +1,6 @@
-.sec8{
-  margin-bottom: 90px;
+#productline{
+  background-color: white;
+  color: #000;
 }
 
 .product-line, .purchase {
@@ -8,9 +9,6 @@
   gap: 40px; /* Consistent spacing between images and buttons */
   padding: 60px 0;
 }
-
-
-
 .product-item {
   text-align: center;
   max-width: 400px; /* Matches the image width */
@@ -44,7 +42,10 @@
 .purchase-button:hover {
   background-color: #ce000e ;  /* Change background color on hover */
 }
-
+.product-item img {
+  border: 1px solid black;
+  margin-bottom: 30px;
+}
 @media (max-width:768px) {
   .product-line, .purchase {
     display: flex;

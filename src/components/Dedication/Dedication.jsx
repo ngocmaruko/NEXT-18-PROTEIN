@@ -130,8 +130,7 @@ const Dedication = () => {
             <div className="round-shape"></div>
           </div>
         </div>
-      </div>
-      <div className="dedication__sec3-calcium-magnesium">
+             <div className="dedication__sec3-calcium-magnesium">
         <div className="calcium-magnesium">
           <div className="inner">
             <div className="calcium-magnesium text">
@@ -145,7 +144,7 @@ const Dedication = () => {
             </div>
 
             <div className="calcium-magnesium img">
-              <img src="" alt="calcium image" />
+              <img src="/img/ca-mg_img.jpg" alt="calcium image" />
             </div>
           </div>
         </div>
@@ -161,7 +160,7 @@ const Dedication = () => {
               </p>
             </div>
             <div className="calcium img">
-              <img src="" alt="calcium image" />
+              <img src="/img/calcium_img.jpg" alt="calcium image" />
             </div>
           </div>
         </div>
@@ -184,32 +183,34 @@ const Dedication = () => {
             </p>
           </div>
           <div className="dedication__sec3-vitamind-img img">
-            <img src="" alt="calcium image" />
+            <img src="/img/vd_img.jpg" alt="calcium image" />
           </div>
         </div>
       </div>
+      </div>
+ 
       <div className="dedication__sec4">
         <div className="inner">
           <div className="recommended-for-kids">
             <h2>こんなジュニア世代にお勧めです！</h2>
             <ul>
               <li>
-                <span class="highlight">スポーツに取り組んでいる</span>
+                <span className="highlight">スポーツに取り組んでいる</span>
                 子供たちに
               </li>
               <li>
-                <span class="highlight">勉強を頑張っている</span>子供たちに
+                <span className="highlight">勉強を頑張っている</span>子供たちに
               </li>
               <li>
                 偏食、または食が細く、
-                <span class="highlight">栄養バランスが不安</span>なお子様に
+                <span className="highlight">栄養バランスが不安</span>なお子様に
               </li>
               <li>
                 スポーツと塾で忙しく
-                <span class="highlight">食事をまともに取れない</span>お子様に
+                <span className="highlight">食事をまともに取れない</span>お子様に
               </li>
               <li>
-                技術はあっても<span class="highlight">競り負けてしまう</span>
+                技術はあっても<span className="highlight">競り負けてしまう</span>
                 お子様に
               </li>
             </ul>
@@ -224,18 +225,18 @@ const Dedication = () => {
             もちろん、トップアスリートの方にも！
           </h2>
           <div className="target">
-            <div class="column">
-              <div class="item">
+            <div className="column">
+              <div className="item">
                 <p>偏食の子供も続けやすい味！</p>
                 <img src="./img/target1.png" alt="Image 1" />
               </div>
-              <div class="item">
+              <div className="item">
                 <p>親子で飲みやすいフレーバー</p>
                 <img src="./img/target2.png" alt="Image 2" />
               </div>
             </div>
-            <div class="column">
-              <div class="item">
+            <div className="column">
+              <div className="item">
                 <p>
                   練習後のリカバリーのために
                   <br />
@@ -243,7 +244,7 @@ const Dedication = () => {
                 </p>
                 <img src="./img/target3.png" alt="Image 3" />
               </div>
-              <div class="item">
+              <div className="item">
                 <p>
                   食が細い子供が心配で <br /> 始めました
                 </p>
@@ -254,7 +255,12 @@ const Dedication = () => {
         </div>
       </div>
 
-      <div className="dedication__sec6"></div>
+      <div className="dedication__sec6">
+        <div className="athlete">
+          <img src="/img/athlete.png" alt="" />
+          <img src="/img/athlete_txt.png" alt="" />
+        </div>
+      </div>
     </section>
   );
 };

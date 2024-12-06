@@ -2,14 +2,24 @@
   text-align: center;
 }
 .testimonial {
-  padding: 30px 0;
+  padding: 90px 0;
+}
+
+.testimonial h2{
+  color: #EB6100;
+  margin: 10px 0;
+  text-shadow: 0px 4px 4px #FFF;
 }
 /* Background color for odd testimonials (1st, 3rd, etc.) */
 .testimonial:nth-child(odd) {
-  background-color: #f0f0f0;
+  background:url('/img/testimonials_bg-odd.jpg') no-repeat center/cover;
 }
 
 /* No background color for even testimonials (2nd, 4th, etc.) */
 .testimonial:nth-child(even) {
-  background-color: transparent;
+  background:url('/img/testimonials_bg-even.jpg') no-repeat center/cover;
 }
+.testimonial-text h5{
+  background: url('/img/comment_bg.png') no-repeat center/cover;
+  padding: 30px;
+  }

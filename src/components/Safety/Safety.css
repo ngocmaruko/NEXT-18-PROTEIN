@@ -1,7 +1,44 @@
-/*sec7*/
+/*safety__sec1*/
+
+#safety{
+  background: url('/img/safety_bg.jpg') no-repeat center/cover;
+  color: #000;
+}
+#safety h2{
+  margin-bottom: 20px;
+}
 .gmp-certified, .anti-doping{
   position: relative;
 }
 .safety-security .inner {
   padding: 90px 0;
+}
+
+#safety h5,
+#safety p
+{
+  background-color: white;
+  padding: 60px 30px;
+
+}
+.safety-security .text h2{
+  color: #CD381A;
+}
+
+.safety-security h5 {
+  box-shadow: 5px 5px 3px #CD381A;
+}
+
+.gmp-certified.text h2{
+  color: #EB6100;
+}
+.gmp-certified .text p{
+  box-shadow: 5px 5px 3px #EB6100;
+}
+
+.anti-doping .text h2{
+  color: #F5BD1D;
+}
+.anti-doping .text p{
+  box-shadow: 5px 5px 3px #F5BD1D;
 }

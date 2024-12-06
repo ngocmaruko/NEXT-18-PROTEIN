@@ -1,3 +1,16 @@
 .advice{
-  background-color: #f0f0f0;
+  background: url('/img/advice_bg.jpg') no-repeat center/cover;
+}
+.advice h2{
+  color: #fff;
+}
+.advice-content{
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  padding: 50px;
+
+}
+.advice-text{
+  padding: 20px 20px 20px 0;
 }

@@ -58,7 +58,7 @@
 .footer-scroll {
   position: static; /* Use static instead of fixed */
   width: 100%;
-  background: lightgrey;
+  background: #F5BD1D;
   color: black;
   text-align: right;
   padding: 30px;

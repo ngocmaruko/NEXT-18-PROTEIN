@@ -1,85 +1,183 @@
-.sponsorship-sec1-inner, .testimonial .inner, .advice-content{
+#team {
+  background-color: #fff;
+  color: #000;
+}
+.sponsorship-sec1 {
+  background: url("/img/sponsorship-sec1_bg.jpg") no-repeat center/cover;
+  position: relative;
+}
+.sponsorship-sec1 h1 {
+  color: #fff;
+}
+.sponsorship-sec1 h5 {
+  position: absolute;
+  left: -10px;
+  width: 50vw;
+  height: 180px;
+  background: url("/img/spo1_bg.png") no-repeat left top;
+  background-size: 100% 100%; /* Stretch background to fill the entire element */
   display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(5deg);
+  opacity: 0;
+  animation: slideRight .5s ease-out forwards;
 }
-.sponsorship-sec1-inner, .advice-content{
-  margin: 60px auto 0;
+.sponsorship-sec1 h5 span {
+  transform: rotate(5deg);
+  text-align: center;
+  color: #eb6100;
 }
-.sponsorship-sec1-text, .testimonial-text, .advice-text {
-  flex: 1;
-  padding-right: 50px;
-  text-align: left;
+.sponsorship-sec1-text p {
+  padding-top: 50px;
 }
 
-.sponsorship-sec1-img, .testimonial-img, .advice-img {
-    width: 100%; /* Use percentage */
-    height: auto; /* Maintain aspect ratio */
-    max-width: 400px; /* Optional max width */
-  }
-  .sponsorship-sec1-img img, .testimonial-img img, .advice-img img{
-    width: 100%; /* Image takes full width of its parent */
-    height: auto; /* Adjust height to maintain aspect ratio */
-    object-fit: cover; /* Ensures the image covers the container */
+.bg-silver {
+  background: linear-gradient(
+    273deg,
+    #fff 0.8%,
+    #c5c5c5 17.59%,
+    #737373 41.64%,
+    #dedede 77.95%,
+    #a1a1a1 90.2%
+  );
+  padding: 20px 30px;
+  width: 60%;
 }
-.sponsorship-sec1-text span, .testimonial-text span, .advice-text span {
-  display: flex; /* Enables flexbox */
-  justify-content: flex-end;
-}
-.sponsorship-sec1-text span h5, .testimonial-text span h5, .advice-text span h5{
+.bg-silver h4{
   text-align: center;
 }
-@media (max-width:768px) {
-  .sponsorship-sec1-inner, .testimonial .inner, .advice-content{
+.sponsorship-sec1 .bg-silver {
+  margin-left: auto;
+  position: absolute;
+  bottom: 0;
+  right: -100px;
+  text-align: center;
+  z-index: 0;
+}
+
+.sponsorship-sec1-text,
+.testimonial-text,
+.advice-text {
+  flex: 1;
+  text-align: left;
+  position: relative;
+}
+
+.sponsorship-sec1-img,
+.sponsorship-sec2-image,
+.testimonial-img,
+.advice-img {
+  width: 100%;
+  height: auto;
+  max-width: 400px;
+  z-index: 1;
+}
+
+.sponsorship-sec1-text span,
+.testimonial-text span,
+.advice-text span {
+  display: flex;
+  justify-content: flex-end;
+}
+.sponsorship-sec1-text span h5,
+.testimonial-text span h5,
+.advice-text span h5 {
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .sponsorship-sec2-top,
+  .testimonial .inner,
+  .advice-content {
     flex-direction: column;
     align-items: center;
   }
-  .sponsorship-sec1-text, .testimonial-text, .advice-text{
+  .sponsorship-sec1-text,
+  .testimonial-text,
+  .advice-text {
     padding: 0;
   }
 }
 
-.sponsorship-sec2{
-  background-color: #f0f0f0;
-}
-.sponsorship-part{
+.sponsorship-sec1-inner {
   display: flex;
-  align-items: center;
-  margin-bottom: 20px;
-  position: relative; /* Enable positioning for children */
+  margin-top: 90px;
+  gap: 60px;
 }
-.sponsorship-part-text{
+
+/*.sponsorship-sec2*/
+
+.sponsorship-sec2 {
+  background: url("/img/sponsorship-sec2_bg.jpg") no-repeat center/cover;
+  position: relative;
+  overflow: hidden; /* Hide any content that overflows */
+}
+
+.sponsorship-sec2-top,
+.testimonial .inner,
+.advice-content {
+  display: flex;
+  gap: 30px;
+}
+.sponsorship-sec2-top {
+  align-items: center;
+}
+.sponsorship-sec2-text {
   padding: 30px;
   flex: 1;
+  padding-top: 90px;
+  text-align: left;
+  position: relative;
+  z-index: 1;
 }
-.sponsorship-part-image{
-  width: 100%;
-  height: auto;
-  max-width: 400px;
+.sponsorship-sec2 .bg-silver {
+  text-align: left;
+  width: 50%;
+  margin-right: auto;
+  position: absolute;
+  left: -200px;
+  z-index: 0;
 }
-.sponsorship-part-image img{
+
+.sponsorship-sec1-text h4,
+.sponsorship-sec2-text h4{
+  color: #fff;
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.30), 0px 1px 3px rgba(0, 0, 0, 0.15);
+}
+.sponsorship-sec2-top h5 {
+  position: absolute;
+  right: -10px;
+  top: -300px;
+  width: 50vw;
+  height: 200px;
+  background: url("/img/spo2_bg.png") no-repeat;
+  background-size: 100% 100%; /* Stretch background to fill the entire element */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(-5deg);
+}
+
+.sponsorship-sec2-image img {
   width: 100%;
   height: auto;
   object-fit: cover;
 }
-.reverse{
-  flex-direction: row-reverse;
+.sponsorship-sec2-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -75px;
 }
-.reverse .sponsorship-part-text{
-  position: absolute;
-  top: 50%;
-  left: 0%;
-  transform: translate(0, -50%);
-  
+.sponsorship-sec2-bottom p {
+  text-align: center;
 }
-.reverse .sponsorship-part-image{
-  max-width: 700px;
-  height: 300px;
-  overflow: hidden;
-}
-@media (max-width:768px) {
-  .sponsorship-part{
+
+@media (max-width: 768px) {
+  .sponsorship-part {
     flex-direction: column-reverse;
   }
-  .reverse .sponsorship-part-text{
+  .reverse .sponsorship-part-text {
     position: static;
     margin: 0;
     transform: none;
@@ -87,42 +185,73 @@
 }
 
 /*sponsership-sec3*/
-.sponsorship-sec3{
+.sponsorship-sec3 {
   text-align: center;
   padding: 60px 0;
 }
-.sponsorship-sec3 .inner{
+.sponsorship-sec3 .inner {
   padding: 30px 0;
 }
-.soccer, .futsal{
-  display: flex;
-  justify-content: space-between;
+
+.soccer-teams,
+.futsal-teams {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  padding: 0;
+  margin: 0 auto; /* Center the grid container */
 }
-.volleyball, .basketball{
+.soccer-teams li,
+.futsal-teams li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Center the last item if it’s the only one in the row */
+.soccer-teams li:nth-last-child(1) {
+  grid-column: 2; /* Center the last item in the second column */
+}
+
+.volleyball,
+.basketball {
   display: flex;
   justify-content: center;
 }
-.sponsorship-sec3 h4{
-  background-color: #f0f0f0;
+.sponsorship-sec3 h4 {
+  background: linear-gradient(
+    288deg,
+    #eb6100 7.44%,
+    #f5bd1d 59.5%,
+    #ffde00 89.71%
+  );
+  color: #fff;
 }
-.sponsorship-sec3 h2 span{
+.sponsorship-sec3 h2 span {
   font-size: 0.8rem;
 }
-.sponsorship-sec3 h2{
+.sponsorship-sec3 h2 {
   padding: 30px 0;
+  color: #eb6100;
 }
-.sponsorship-sec3 li{
+.sponsorship-sec3 li {
   line-height: 3;
 }
-.futsal-teams:nth-child(3n){
-  padding-left:-30px ;
+.futsal-teams:nth-child(3n) {
+  padding-left: -30px;
 }
 @media (max-width: 768px) {
-  .soccer, .futsal{
+  .soccer,
+  .futsal {
     flex-direction: column;
     align-items: center;
   }
-  .soccer .inner{
+  .soccer .inner {
     padding: 0;
   }
+  .soccer-teams {
+    grid-template-columns: 1fr;
+  }
 }
+

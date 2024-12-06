@@ -1,13 +1,13 @@
 .hero {
-  background-image: url('/img/mv.png'); /* Background image URL */
-  background-size: cover; /* Cover the entire hero area */
-  background-position: center; /* Center the image */
-  min-height: calc(100vh - 20px); /* Full viewport height minus the navbar height */
-  display: flex; /* Use flexbox for centering text */
-  justify-content: flex-start; /* Align items to the left */
-  align-items: center; /* Center vertically */
-  position: relative; /* Position relative to allow absolute positioning of text */
-  z-index: 1; /* Ensure hero section is above the background */
+  background-image: url('/img/mv.png'); /* Using the PUBLIC_URL placeholder */
+  background-size: cover;
+  background-position: center;
+  min-height: calc(100vh - 20px);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  z-index: 1;
 }
 
 /* Add a dark overlay

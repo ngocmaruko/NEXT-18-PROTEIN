@@ -24,7 +24,7 @@ const Advice = () => {
               </span>
             </div>
             <div className="advice-img">
-              <img src={tablet} alt="" />
+              <img src='/img/chiba.png'alt="" />
             </div>
           </div>
     </div>
