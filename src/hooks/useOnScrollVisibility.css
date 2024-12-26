@@ -1,0 +1,101 @@
+/* flipLeft animation */
+.flipLeft {
+  animation-name: flipLeftAnime;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  perspective-origin: left center;
+  opacity: 1;
+  z-index: 1; /* Ensure it's above other elements during the animation */
+}
+
+@keyframes flipLeftAnime {
+  from {
+    transform: perspective(600px) translate3d(0, 0, 0) rotateY(30deg);
+    opacity: 0;
+  }
+  to {
+    transform: perspective(600px) translate3d(0, 0, 0) rotateY(0deg);
+    opacity: 1;
+  }
+}
+
+/* Slide Animation*/
+@keyframes slideRight {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideLeft {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideTop {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideBottom {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.slide-right {
+  animation: slideRight 0.5s ease-out forwards;
+}
+
+.slide-left {
+  animation: slideLeft 0.5s ease-out forwards;
+}
+
+.slide-top {
+  animation: slideTop 0.5s ease-out forwards;
+
+}
+
+.slide-bottom {
+  animation: slideBottom 0.5s ease-out forwards;
+
+}
+
+@keyframes highlightAnimation {
+  0% {
+      background-color: transparent;
+      color: inherit;
+  }
+  100% {
+    background: radial-gradient(10% 20% at 30% 50%, #BC8F8F 0%, rgba(253, 169, 250, 0) 100%);;
+    color: white;
+  }
+}
+
+.highlighted {
+  animation: highlightAnimation 1s ease forwards; /* Adjust duration as needed */
+  animation-delay: 0.5s;
+  display: inline-block;
+}
+

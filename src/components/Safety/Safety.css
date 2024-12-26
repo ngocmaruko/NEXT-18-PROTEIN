@@ -1,7 +1,6 @@
 /*safety__sec1*/
 
 #safety{
-  background: url('/img/safety_bg.jpg') no-repeat center/cover;
   color: #000;
 }
 #safety h2{
@@ -21,7 +20,7 @@
   padding: 60px 30px;
 
 }
-.safety-security .text h2{
+.safety-security-text h2{
   color: #CD381A;
 }
 
@@ -29,16 +28,23 @@
   box-shadow: 5px 5px 3px #CD381A;
 }
 
-.gmp-certified.text h2{
+.gmp-certified-text h2{
   color: #EB6100;
 }
-.gmp-certified .text p{
+.gmp-certified-text p{
   box-shadow: 5px 5px 3px #EB6100;
 }
 
-.anti-doping .text h2{
+.anti-doping-text h2{
   color: #F5BD1D;
 }
-.anti-doping .text p{
+.anti-doping-text p{
   box-shadow: 5px 5px 3px #F5BD1D;
+}
+@media (max-width:768px) {
+  .gmp-certified .inner{
+    display: flex;
+    flex-direction: column;
+  }
+  
 }

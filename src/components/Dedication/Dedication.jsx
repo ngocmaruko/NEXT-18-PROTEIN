@@ -27,51 +27,65 @@ const Dedication = () => {
           </h4>
         </div>
       </div>
-      <div className="dedication__sec2">
+      <div
+        className="dedication__sec2"
+        style={{
+          background: 'url("/img/attention_bg.png") no-repeat center/cover',
+        }}
+      >
         <div className="inner">
           <div className="dedication__sec2-attention">
             <div className="dedication__sec2-attention--mark">
               <img src="/img/attention_mark.png" alt="" />
-              <h2 className="highline">ATTENTION</h2>
+              <h2 className="accent">ATTENTION</h2>
             </div>
             <h4>
               ムキムキになりたい！ダイエットしたい！
               <br />
               向けのプロテインではありません
             </h4>
-            <h2 className="highline">
+            <h2 className="accent">
               子供の成長を支えるプロテインサプリメント <br /> <span>です</span>
             </h2>
           </div>
         </div>
       </div>
       <div className="dedication__sec3">
-        <div className="dedication__sec3-junior-protein">
+        <div
+          className="dedication__sec3-junior-protein"
+          style={{
+            background: 'url("/img/sec3-1_bg.png") no-repeat center/cover',
+          }}
+        >
           <div className="inner">
             <div className="digest-text">
               <h2>
                 成人と比べ・・・ <br />
-                ジュニア世代は{" "}
-                <span className="highline">消化機能が弱い！</span>
+                ジュニア世代は <span className="accent">消化機能が弱い！</span>
               </h2>
               <div className="arrow-down">
                 <img src="./img/downarrow.png" alt="" />
               </div>
               <h4>だから！</h4>
               <h2>
-                <span className="highline">消化吸収が良いプロテイン</span>を
+                <span className="accent">消化吸収が良いプロテイン</span>を
                 <br /> お勧めします。
               </h2>
             </div>
             <img className="digest-img" src="./img/digest.png" alt="" />
           </div>
         </div>
-        <div className="dedication__sec3-growth-nutrients">
+        <div
+          className="dedication__sec3-growth-nutrients"
+          style={{
+            background: 'url("/img/sec3-2_bg.png") no-repeat center/cover',
+          }}
+        >
           <div className="inner">
             <div className="growth-nutrients__text">
               <h4>スクスク伸びる成長期のカラダに必要な</h4>
               <h2>
-                <span className="highline">栄養素をシッカリ配合！</span>
+                <span className="accent">栄養素をシッカリ配合！</span>
               </h2>
               <div className="wph-protein">
                 <div className="title-number">
@@ -88,7 +102,12 @@ const Dedication = () => {
             </div>
           </div>
         </div>
-        <div className="dedication__sec3-graph">
+        <div
+          className="dedication__sec3-graph"
+          style={{
+            background: 'url("/img/sec3-3_bg.png") no-repeat center/cover',
+          }}
+        >
           <div className="inner">
             <div className="graph">
               <img
@@ -114,7 +133,7 @@ const Dedication = () => {
         </div>
         <div className="dedication__sec3-mct-oil">
           <div className="inner">
-            <div className="mct-oil">
+            <div className="mct-oil-text text right">
               <div className="title-number">
                 <img src="/img/MCT-2.png" alt="" />
                 <h4>
@@ -127,102 +146,194 @@ const Dedication = () => {
                 カラダに蓄積されにくいという性質もあることから、スポーツを頑張る子供たちにも最適なエネルギー源として注目が集まる成分です。
               </p>
             </div>
-            <div className="round-shape"></div>
+            <div className="mct-oil-img round-shape left">
+              <img src="/img/mct-oil_img.jpg" alt="calcium image" />
+            </div>
           </div>
         </div>
-             <div className="dedication__sec3-calcium-magnesium">
-        <div className="calcium-magnesium">
-          <div className="inner">
-            <div className="calcium-magnesium text">
-              <h4>理想的なカルシウム＆マグネシウム</h4>
-              <p>
-                骨のためにはカルシウムさえ摂っていれば大丈夫…ではありません。
-                実はカルシウムと一緒にマグネシウムもバランスよく摂取しなくてはどんなにカルシウムだけを摂っても骨が強くなるどころか逆効果。
-                学術的に推奨されているのはカルシウム2～3に対して、マグネシウム1のバランスでの摂取です。NEXT-18
-                プロテインは、この２：１の黄金割合で配合されているので、効率的にカルシウムを補給できるシステムを構築しています。
-              </p>
-            </div>
+        <div
+          className="dedication__sec3-calcium-magnesium"
+          style={{
+            background: 'url("/img/sec3-4_bg.jpg") no-repeat center/cover',
+          }}
+        >
+          <div className="calcium-magnesium">
+            <div className="inner">
+              <div className="calcium-magnesium-text text left">
+                <h4>理想的なカルシウム＆マグネシウム</h4>
+                <p>
+                  骨のためにはカルシウムさえ摂っていれば大丈夫…ではありません。
+                  実はカルシウムと一緒にマグネシウムもバランスよく摂取しなくてはどんなにカルシウムだけを摂っても骨が強くなるどころか逆効果。
+                  学術的に推奨されているのはカルシウム2～3に対して、マグネシウム1のバランスでの摂取です。NEXT-18
+                  プロテインは、この２：１の黄金割合で配合されているので、効率的にカルシウムを補給できるシステムを構築しています。
+                </p>
+              </div>
 
-            <div className="calcium-magnesium img">
-              <img src="/img/ca-mg_img.jpg" alt="calcium image" />
+              <div className="calcium-magnesium-img round-shape right">
+                <img src="/img/ca-mg_img.jpg" alt="calcium image" />
+              </div>
+            </div>
+          </div>
+          <div className="calcium">
+            <div className="inner">
+              <div className="calcium-text text right">
+                <h4>
+                  成長期に必要なカルシウム量 <br /> 700mg~1,000mgが必要です！
+                </h4>
+                <p>
+                  カルシウムは骨となる以外にも、筋肉を働かせる役割も持っています。
+                  カルシウムに拮抗して働くマグネシウムは、筋肉を緩める作用を持っています。 カルマグバランスが崩れると筋肉がうまくバランスを取ることができずに、痙攣や脚の攣り（つり）が起こりやすくなります。
+                </p>
+              </div>
+              <div className="calcium-img round-shape left">
+                <img src="/img/calcium_img.jpg" alt="calcium image" />
+              </div>
             </div>
           </div>
         </div>
-        <div className="calcium">
+        <div
+          className="dedication__sec3-vitamind"
+          style={{
+            background: 'url("/img/sec3-5_bg.png") no-repeat center/cover',
+          }}
+        >
           <div className="inner">
-            <div className="calcium text">
-              <h4>
-                成長期に必要なカルシウム量 <br /> 700mg~1,000mgが必要です！
-              </h4>
+            <div className="dedication__sec3-vitamind-text text left">
+              <div className="title-number">
+                <img src="/img/vd-3.png" alt="" />
+                <h4>
+                  カルシウムの吸収を助ける <br />
+                  ビタミンD
+                </h4>
+              </div>
               <p>
-                カルシウムは骨となる以外にも、筋肉を働かせる役割も持っています。
-                カルシウムに拮抗して働くマグネシウムは、筋肉を緩める作用を持っています。 カルマグバランスが崩れると筋肉がうまくバランスを取ることができずに、痙攣や脚の攣り（つり）が起こりやすくなります。
+                ビタミンDは、カルシウムの吸収を助ける大切なビタミンの一つです。
+                日光によっても生体内でビタミンＤを生成することができますが、
+                小魚やきのこ類などの摂取不足によってビタミンＤが不足がちです。
+                屋外での遊びやスポーツをすることで成長期の骨格作りをサポートします。
               </p>
             </div>
-            <div className="calcium img">
-              <img src="/img/calcium_img.jpg" alt="calcium image" />
+            <div className="dedication__sec3-vitamind-img round-shape right">
+              <img src="/img/vd_img.jpg" alt="calcium image" />
             </div>
           </div>
         </div>
       </div>
-      <div className="dedication__sec3-vitamind">
-        <div className="inner">
-          <div className="dedication__sec3-vitamind-text">
-            <div className="title-number">
-              <img src="/img/vd-3.png" alt="" />
-              <h4>
-                カルシウムの吸収を助ける <br />
-                ビタミンD
-              </h4>
-            </div>
-            <p>
-              ビタミンDは、カルシウムの吸収を助ける大切なビタミンの一つです。
-              日光によっても生体内でビタミンＤを生成することができますが、
-              小魚やきのこ類などの摂取不足によってビタミンＤが不足がちです。
-              屋外での遊びやスポーツをすることで成長期の骨格作りをサポートします。
-            </p>
-          </div>
-          <div className="dedication__sec3-vitamind-img img">
-            <img src="/img/vd_img.jpg" alt="calcium image" />
-          </div>
-        </div>
-      </div>
-      </div>
- 
-      <div className="dedication__sec4">
+
+      <div
+        className="dedication__sec4"
+        style={{ background: 'url("/img/sec4_bg.jpg") no-repeat center/cover' }}
+      >
         <div className="inner">
           <div className="recommended-for-kids">
             <h2>こんなジュニア世代にお勧めです！</h2>
             <ul>
-              <li>
-                <span className="highlight">スポーツに取り組んでいる</span>
+              <li style={{ position: "relative", paddingLeft: "3rem" }}>
+                <div
+                  style={{
+                    position: "absolute",
+                    left: "0",
+                    top: "0.2em",
+                    width: "2.5rem",
+                    height: "2.5rem",
+                    background:
+                      'url("/img/li_mark.png") no-repeat center center',
+                    backgroundSize: "contain",
+                  }}
+                ></div>
+                <span className="highlight">スポーツに取り組んでいる</span>{" "}
                 子供たちに
               </li>
-              <li>
-                <span className="highlight">勉強を頑張っている</span>子供たちに
+              <li style={{ position: "relative", paddingLeft: "3rem" }}>
+                <div
+                  style={{
+                    position: "absolute",
+                    left: "0",
+                    top: "0.2em",
+                    width: "2.5rem",
+                    height: "2.5rem",
+                    background:
+                      'url("/img/li_mark.png") no-repeat center center',
+                    backgroundSize: "contain",
+                  }}
+                ></div>
+                <span className="highlight">勉強を頑張っている</span> 子供たちに
               </li>
-              <li>
+              <li style={{ position: "relative", paddingLeft: "3rem" }}>
+                <div
+                  style={{
+                    position: "absolute",
+                    left: "0",
+                    top: "0.2em",
+                    width: "2.5rem",
+                    height: "2.5rem",
+                    background:
+                      'url("/img/li_mark.png") no-repeat center center',
+                    backgroundSize: "contain",
+                  }}
+                ></div>
                 偏食、または食が細く、
                 <span className="highlight">栄養バランスが不安</span>なお子様に
               </li>
-              <li>
+              <li style={{ position: "relative", paddingLeft: "3rem" }}>
+                <div
+                  style={{
+                    position: "absolute",
+                    left: "0",
+                    top: "0.2em",
+                    width: "2.5rem",
+                    height: "2.5rem",
+                    background:
+                      'url("/img/li_mark.png") no-repeat center center',
+                    backgroundSize: "contain",
+                  }}
+                ></div>
                 スポーツと塾で忙しく
-                <span className="highlight">食事をまともに取れない</span>お子様に
-              </li>
-              <li>
-                技術はあっても<span className="highlight">競り負けてしまう</span>
+                <span className="highlight">食事をまともに取れない</span>{" "}
                 お子様に
+              </li>
+              <li style={{ position: "relative", paddingLeft: "3rem" }}>
+                <div
+                  style={{
+                    position: "absolute",
+                    left: "0",
+                    top: "0.2em",
+                    width: "2.5rem",
+                    height: "2.5rem",
+                    background:
+                      'url("/img/li_mark.png") no-repeat center center',
+                    backgroundSize: "contain",
+                  }}
+                ></div>
+                技術はあっても
+                <span className="highlight">競り負けてしまう</span> お子様に
               </li>
             </ul>
           </div>
         </div>
       </div>
 
-      <div className="dedication__sec5">
+      <div
+        className="dedication__sec5"
+        style={{ background: 'url("/img/sec5_bg.jpg") no-repeat center/cover' }}
+      >
         <div className="inner">
-          <h2>
+          <h2 style={{ position: "relative" }}>
             小学生、中学生、高校生のお子様に！ <br />
             もちろん、トップアスリートの方にも！
+            <div
+              style={{
+                position: "absolute",
+                content: '""',
+                background: 'url("/img/target_line.png") no-repeat center',
+                backgroundSize: "contain",
+                width: "100%",
+                height: "130px",
+                bottom: "-60px",
+                left: "0",
+                zIndex: -1,
+              }}
+            ></div>
           </h2>
           <div className="target">
             <div className="column">
@@ -255,7 +366,7 @@ const Dedication = () => {
         </div>
       </div>
 
-      <div className="dedication__sec6">
+      <div className="dedication__sec6" style={{ background: 'url("/img/athlete_bg.png") no-repeat center/cover' }}>
         <div className="athlete">
           <img src="/img/athlete.png" alt="" />
           <img src="/img/athlete_txt.png" alt="" />

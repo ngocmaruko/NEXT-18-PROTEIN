@@ -2,11 +2,12 @@
 text-align: center;
 }
 .next18__mv {
-  display: flex; /* Use flexbox for centering */
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-  width: 100%; /* Ensure the div takes full width of its parent */
-  position: relative; /* Ensure positioning is handled correctly */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  height: 110vh;
 }
 
 .next18__mv-img {
@@ -14,17 +15,25 @@ text-align: center;
 }
 
 .next18__mv-content {
-  position: absolute;
-  top: 3vh;
+  margin-top: -65vh;
   width: 30vw;
 }
+.next18__mv-content h1 {
+  transition: transform 0.5s ease-in-out;
+  transform: scale(0.1);
+}
+
+.next18__mv-content h1.scaled {
+  transform: scale(1);
+}
+
 .next18__mv-content h4 {
-  margin-top: -2vh;
+  margin-top: -1.2vh;
 }
 
 .image-grid {
   display: flex;
-  flex-wrap: wrap; /* Enable wrapping of images */
+  flex-wrap: wrap;
   justify-content: space-around;
 }
 
@@ -44,7 +53,7 @@ text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f0f0f0; /* Adjust the background color as needed */
+  background-color: #f0f0f0;
 }
 
 .image-grid__circle img {
@@ -58,7 +67,22 @@ text-align: center;
   margin: 40px 0 10px;
   font-weight: bold;
 }
-
+@media (min-width: 769px) and (max-width: 1180px) {
+  .next18__mv {
+    height: 67vh;
+  }
+  .next18__mv-content{
+    width: 55vw;
+    margin-top: -35vh;
+    margin-bottom: 5vh;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1366px) {
+  .next18__mv {
+    height: 120vh;
+  }
+  
+}
 @media (max-width: 768px) {
   .image-grid {
     gap: 10px;
@@ -67,13 +91,21 @@ text-align: center;
     width: 140px;
     height: 140px;
   }
+  .next18__mv{
+    height: 50vh;
+  }
+  .next18__mv-content{
+    width: 60vw;
+    /*top: 1.2vh;*/
+    margin-top: -29vh;
+  }
 }
 
 /*nutrition-compliant*/
 .next18__nutrition-compliant-calcium-magnesium {
   display: flex;
   gap: 30px;
-  margin-top: 60px;
+  margin-top: 30px;
 }
 .next18__nutrition-compliant-calcium-magnesium p {
   text-align: left;
@@ -81,7 +113,6 @@ text-align: center;
 .next18__nutrition-compliant-calcium,
 .next18__nutrition-compliant-magnesium,
 .next18__nutrition-compliant-vitamin-d {
-  background: url('/img/compliant_bg.png') no-repeat center/cover;
   padding: 30px 20px;
   border-radius: 10px;
   margin: 40px 0;
@@ -91,7 +122,6 @@ text-align: center;
 .next18__nutrition-compliant-calcium::before{
   position: absolute;
   content: '';
-  background: url('/img/ca.png') no-repeat center/contain;
   width: 100px; 
   height: 100px;
   top: -50px;
@@ -100,7 +130,6 @@ text-align: center;
 .next18__nutrition-compliant-magnesium::before{
   position: absolute;
   content: '';
-  background: url('/img/mg.png') no-repeat center/contain;
   width: 100px; 
   height: 100px;
   top: -50px;
@@ -109,7 +138,6 @@ text-align: center;
 .next18__nutrition-compliant-vitamin-d::before{
   position: absolute;
   content: '';
-  background: url('/img/vd.png') no-repeat center/contain;
   width: 100px; 
   height: 100px;
   top: -50px;
@@ -117,7 +145,7 @@ text-align: center;
 }
 .next18__nutrition-compliant-trusted-quality {
   display: flex;
-  margin-top: 25vh;
+  margin-top: 10vh;
   justify-content: space-between;
 }
 .next18__nutrition-compliant-trusted-quality-text p{
@@ -132,8 +160,15 @@ text-align: center;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-
+  gap: 30px;
 }
-.next18__nutrition-compliant-trusted-quality-text h5{
- line-height: 2;
+
+@media (max-width:768px) {
+  .next18__nutrition-compliant-calcium-magnesium, .next18__nutrition-compliant-trusted-quality{
+    flex-direction: column;
+    gap: 30px;
+  }
+  .next18__nutrition-compliant-trusted-quality-img img{
+    max-width: 80%;
+  }
 }

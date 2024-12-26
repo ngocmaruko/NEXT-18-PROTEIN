@@ -1,26 +1,30 @@
-// src/components/BackToTop/BackToTop.jsx
 import React, { useEffect, useState } from 'react';
-import './BackToTop.css'; // Import the CSS file
+import './BackToTop.css';
 
 const BackToTop = () => {
   const [showBackToTop, setShowBackToTop] = useState(false);
 
+
   useEffect(() => {
+    const backToTop = document.querySelector('.back-to-top');
+
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
+      const documentHeight = document.documentElement.scrollHeight;
       const windowHeight = window.innerHeight;
-      const fullHeight = document.documentElement.scrollHeight;
 
-      if (scrollPosition > 300) {
+      if (scrollPosition > 110) {
         setShowBackToTop(true);
       } else {
+        setShowBackToTop(false);
+      }
+
+      if(scrollPosition + windowHeight >= documentHeight - 100){
         setShowBackToTop(false);
       }
     };
 
     window.addEventListener('scroll', handleScroll);
-
-    // Clean up the event listener on unmount
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -37,7 +41,7 @@ const BackToTop = () => {
         onClick={scrollToTop}
         className={`back-to-top ${showBackToTop ? 'show' : ''}`}
        >
-        ↑
+      <img src="/img/pagetop.png" alt="" />
       </button>
     </>
   );

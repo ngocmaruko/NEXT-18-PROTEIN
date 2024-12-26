@@ -1,4 +1,3 @@
-
 /* First Footer (appears after scrolling 600px) */
 .footer-fixed {
   position: fixed;
@@ -8,7 +7,7 @@
   background: linear-gradient(to right, #ec7700 0%, #ce000e 100%);
   color: white;
   text-align: center;
-  padding: 12px 0;
+  padding: 20px 0;
   z-index: 10;
   opacity: 0; /* Initially hidden */
   transition: opacity 0.3s ease, transform 0.3s ease;
@@ -28,81 +27,103 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 30px; /* Space between items */
+  gap: 30px;
 }
-
+.footer-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
 .footer-button {
-  background: white;
-  color: red;
-  border: none;
-  padding: 8px 12px;
-  border-radius: 4px;
-  height: 40px;
+  width: 400px;
+  height: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   cursor: pointer;
-  font-weight: 550;
-  height: 50px;
-  min-width: 200px;
-  margin: 0 20px;
+  transition: all 0.3s ease;
+}
+.footer-button img {
+  display: block;
 }
 
 .footer-button:hover {
-  opacity: 0.8;
+  transform: scale(1.05);
 }
 
 .footer-item span {
   font-weight: bold;
-  font-size: 15px;
+  font-size: 1.1rem;
+  color: #f5bd1d;
+  display: block;
 }
 
 /* Second Footer (at the bottom of the page, not fixed) */
-.footer-scroll {
-  position: static; /* Use static instead of fixed */
+.footer-2 {
   width: 100%;
-  background: #F5BD1D;
+  background: #f5bd1d;
   color: black;
   text-align: right;
-  padding: 30px;
+  padding: 20px 100px;
   display: flex;
   justify-content: flex-end;
   gap: 20px;
 }
 
-.footer-scroll-content {
+.footer-2-content {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
   gap: 20px;
 }
 
-.footer-scroll-item {
+.footer-2-item {
   cursor: pointer;
 }
 
-.footer-scroll-item:hover {
+.footer-2-item.instagram-icon img {
+  width: 80%;
+  display: block; /* Remove inline gaps caused by img being inline by default */
+}
+
+.footer-2-item:hover {
   text-decoration: underline;
   color: #333;
 }
 
 @media (max-width: 768px) {
+  .footer-fixed {
+    padding: 10px 0;
+  }
+  .footer-item {
+    margin-bottom: 10px;
+  }
+  .footer-item span br {
+    display: none; /* Keep it on a single line on larger screens */
+  }
   .footer-content {
     flex-direction: column;
     gap: 0;
   }
 
   .footer-buttons {
-    display: flex;
+    gap: 10px;
   }
 
   .footer-button {
+    width: 200px;
     height: 50px;
-    min-width: 150px;
-    margin: 5px 15px;
+    overflow: hidden;
+    /*border-radius: 5px;*/
+  }
+  .footer-button img {
+    width: 100%; /* Make image fill the container */
+    height: 100%; /* Make image fill the container */
+    object-fit: cover; /* Scale the image to cover the container */
+    object-position: center; /* Focus on the center of the image */
+    /*border-radius: inherit;*/
   }
 
-  .footer-scroll {
+  .footer-2 {
     display: none;
-  }
-
-  .footer-fixed.stopped {
-    bottom: 0; /* Stop at 50px from the bottom */
   }
 }

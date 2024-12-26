@@ -1,6 +1,5 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import { assets } from "./assets/assets";
 import HomePage from "./pages/HomePage/HomePage";
 import "./App.css";
 import Footer from "./components/Footer/Footer";
@@ -13,7 +12,7 @@ import Navbar1 from "./components/Navbar1/Navbar1";
 function App() {
   return (
     <div className="App">
-      <Navbar1 logo={assets.logo} instaIcon={assets.instaIcon} />
+      <Navbar1/>
       <main>
         <Routes>
           <Route path="/" element={<HomePage />} />

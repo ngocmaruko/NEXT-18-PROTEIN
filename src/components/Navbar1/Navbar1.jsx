@@ -4,7 +4,7 @@ import { HashLink } from "react-router-hash-link";
 import "./Navbar1.css";
 import { FaBars, FaTimes } from "react-icons/fa";
 
-const Navbar1 = ({ instaIcon, logo }) => {
+const Navbar1 = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
   const navbarRef = useRef(null);
@@ -37,7 +37,7 @@ const Navbar1 = ({ instaIcon, logo }) => {
     <header className="navbar" ref={navbarRef}>
       <div className="logo">
         <a href="/">
-          <img src={logo} alt="Logo" />
+          <img src='/img/logo.png' alt="Logo" />
         </a>
       </div>
       <div
@@ -114,7 +114,7 @@ const Navbar1 = ({ instaIcon, logo }) => {
                 href="https://www.instagram.com/hongo3_official/"
                 target="_blank"
               >
-                <img src={instaIcon} alt="インスタグラム" />
+                <img src='/img/insta.png'alt="インスタグラム" />
               </a>
             </li>
           </ul>

@@ -1,16 +1,26 @@
-.advice{
-  background: url('/img/advice_bg.jpg') no-repeat center/cover;
-}
 .advice h2{
   color: #fff;
 }
 .advice-content{
+  background-color: #fff;
+  padding: 30px;
+  margin-top: 60px;
+}
+.advice-content-column{
+  display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #fff;
-  padding: 50px;
-
+  gap: 30px;
 }
 .advice-text{
-  padding: 20px 20px 20px 0;
+  /*padding: 20px 20px 0px 0px;*/
+}
+.advice-img{
+  flex-direction: column;
+  gap: 60px;
+}
+@media (max-width:768px) {
+  .advice-content-column{
+    flex-direction: column;
+  }
 }

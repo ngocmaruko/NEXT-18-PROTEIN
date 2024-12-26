@@ -3,19 +3,47 @@ import "./Team.css";
 import Testimonials from "../../components/Testimonials/Testimonials";
 import FAQ from "../../components/FAQ/FAQ";
 import Advice from "../../components/Advice/Advice";
-import Observer from "../../components/Observer/Observer";
+import useOnScrollVisibility from "../../hooks/useOnScrollVisibility";
 
 const Team = () => {
+  const [flag1, isFlag1Visible] = useOnScrollVisibility();
+  const [flag2, isFlag2Visible] = useOnScrollVisibility();
   return (
     <section id="team">
-      <div className="sponsorship-sec1">
+      <div
+        className="sponsorship-sec1"
+        style={{
+          background:
+            'url("/img/sponsorship-sec1_bg.jpg") no-repeat center/cover',
+        }}
+      >
         <div className="inner">
           <h1>協賛・導入チーム</h1>
           <h4>勉強もスポーツも頑張る子供を応援します！</h4>
 
-            <h5>
-              <span>運動も勉強も頑張るジュニア世代にオススメ！</span>
-            </h5>
+          <h5
+            ref={flag1}
+            className={`flag1 ${isFlag1Visible ? "slide-right" : ""}`}
+            style={{
+              position: "absolute",
+              left: "-10px",
+              width: "50vw",
+              height: "180px",
+              backgroundImage: "url('/img/spo1_bg.png')",
+              backgroundRepeat: "no-repeat",
+              backgroundPosition: "left top",
+              backgroundSize: "100% 100%",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <span>
+              運動も勉強も頑張る
+              <br />
+              ジュニア世代にオススメ！
+            </span>
+          </h5>
 
           <div className="sponsorship-sec1-inner">
             <div className="sponsorship-sec1-text">
@@ -24,12 +52,16 @@ const Team = () => {
                 フットサルは、体が激しくぶつかり合うことが多いスポーツです。競り合いで倒されたりすることも日常茶飯事の為、“当たり負けしないカラダづくり”の為にも、日々の食事への配慮は欠かせません。
                 <br />
                 NEXT-18
-                PROTEINは、プロテインなどの「タンパク質」以外にも、カラダづくりに欠かせない豊富な栄養素が含まれています。爽やかなヨーグルトテイストで、疲れきったトレーニング後でもとても飲みやすい味です。運動も勉強も頑張るジュニア世代にお勧めしたいです！
+                PROTEINは、プロテインなどの「タンパク質」以外にも、カラダづくりに欠かせない豊富な栄養素が含まれています。爽や
+                かなヨーグルトテイストで、疲れきったトレーニング後でもとても飲みやすい味です。運動も勉強も頑張るジュニア世代にお勧めしたいです！
               </p>
               <br />
               <div className="bg-silver">
-                <h4>リガーレヴィア葛飾 <br />
-                尻屋 貴紀選手</h4>
+                <h4>
+                  <span>選手リガーレヴィア葛飾</span>
+                  <br />
+                  尻屋 貴紀 <span> 選手</span>
+                </h4>
               </div>
             </div>
             <div className="sponsorship-sec1-img">
@@ -38,17 +70,39 @@ const Team = () => {
           </div>
         </div>
       </div>
-      <div className="sponsorship-sec2">
+      <div
+        className="sponsorship-sec2"
+        style={{
+          background:
+            'url("/img/sponsorship-sec2_bg.jpg") no-repeat center/cover',
+        }}
+      >
         <div className="inner">
+          <h5
+            ref={flag2}
+            className={`flag2 ${isFlag2Visible ? "slide-left" : ""}`}
+            style={{
+              position: "absolute",
+              right: "-10px",
+              top: "100px",
+              width: "50vw",
+              height: "200px",
+              backgroundImage: "url('/img/spo2_bg.png')",
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "100% 100%", // Stretch background to fill the entire element
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <span>
+              絶賛愛用中！ <br /> 毎日欠かさず飲んでます！
+            </span>
+          </h5>
           <div className="sponsorship-sec2-top">
             <div className="sponsorship-sec2-image">
               <img src="/img/senshu-2.png" alt="" />
             </div>
-            <Observer animationClass="slide-left">
-              <h5>
-                絶賛愛用中！ <br /> 毎日欠かさず飲んでます！
-              </h5>
-            </Observer>
             <div className="sponsorship-sec2-text">
               <br />
               <h4>
@@ -56,7 +110,9 @@ const Team = () => {
               </h4>
               <br />
               <div className="bg-silver">
-                <h4>塚田 悠暉選手</h4>
+                <h4>
+                  塚田 悠暉<span> 選手</span>
+                </h4>
               </div>
             </div>
           </div>

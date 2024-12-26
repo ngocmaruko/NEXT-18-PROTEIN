@@ -1,18 +1,57 @@
 import React from "react";
 import "./Next18.css";
-import { assets } from "../../assets/assets";
+import useOnScrollVisibility from "../../hooks/useOnScrollVisibility";
 
 const Next18 = () => {
+  const [h1Ref, isH1Visible] = useOnScrollVisibility(0.9); 
+
+  // Inline styles for backgrounds
+  const mvBackgroundStyle = {
+    background: 'url(/img/next18_mv.png) no-repeat bottom/cover',
+  };
+
+  const compliantBackgroundStyle = {
+    background: 'url(/img/compliant_bg.png) no-repeat center/cover',
+  };
+
+  const calciumBeforeStyle = {
+    position: 'absolute',
+    content: "''",
+    background: 'url(/img/ca.png) no-repeat center/contain',
+    width: '100px',
+    height: '100px',
+    top: '-50px',
+    left: '0px',
+  };
+
+  const magnesiumBeforeStyle = {
+    position: 'absolute',
+    content: "''",
+    background: 'url(/img/mg.png) no-repeat center/contain',
+    width: '100px',
+    height: '100px',
+    top: '-50px',
+    left: '0px',
+  };
+
+  const vitaminDBeforeStyle = {
+    position: 'absolute',
+    content: "''",
+    background: 'url(/img/vd.png) no-repeat center/contain',
+    width: '100px',
+    height: '100px',
+    top: '-50px',
+    left: '0px',
+  };
+
   return (
     <section id="next18">
-      <div className="next18__mv">
-        <img
-          className="next18__mv-img"
-          src="/img/next18_mv.png"
-          alt="NEXT-18 PROTEIN main visual"
-        />
+      <div className="next18__mv" style={mvBackgroundStyle}>
         <div className="next18__mv-content">
-          <h1>
+          <h1
+            ref={h1Ref}
+            className={isH1Visible ? "scaled" : ""}
+          >
             <img src="/img/next18_mv_logo.png" alt="NEXT-18 PROTEIN Logo" />
           </h1>
           <h4>
@@ -37,13 +76,13 @@ const Next18 = () => {
               WPH <br /> プロテイン
             </p>
             <div className="image-grid__circle">
-              <img src={assets.tablet} alt="WPHプロテイン" />
+              <img src='/img/wph-protein.jpg' alt="WPHプロテイン" />
             </div>
           </div>
           <div className="image-grid__item">
             <p>MTCオイル</p>
             <div className="image-grid__circle">
-              <img src={assets.tablet} alt="MTCオイル" />
+              <img src='/img/mct-oil.jpg' alt="MTCオイル" />
             </div>
           </div>
           <div className="image-grid__item">
@@ -51,7 +90,7 @@ const Next18 = () => {
               11種の <br /> ビタミン
             </p>
             <div className="image-grid__circle">
-              <img src={assets.tablet} alt="11種のビタミン" />
+              <img src='/img/11vtm.jpg' alt="11種のビタミン" />
             </div>
           </div>
           <div className="image-grid__item">
@@ -59,13 +98,13 @@ const Next18 = () => {
               カルシウム <br /> マグネシウム
             </p>
             <div className="image-grid__circle">
-              <img src={assets.tablet} alt="カルシウムマグネシウム" />
+              <img src='/img/ca-mg.jpg' alt="カルシウムマグネシウム" />
             </div>
           </div>
           <div className="image-grid__item">
             <p>ビタミンD</p>
             <div className="image-grid__circle">
-              <img src={assets.tablet} alt="ビタミンD" />
+              <img src='/img/vitamind.jpg' alt="ビタミンD" />
             </div>
           </div>
         </div>
@@ -75,44 +114,45 @@ const Next18 = () => {
           <h2>
             NEXT-18PROTEIN <span>は</span>
           </h2>
-          <h4>
+          <h5>
             厚生労働省が定める基準を満たした <br />
-            <span className="highline">栄養機能食品</span>です
-          </h4>
+            <span className="accent">栄養機能食品</span>です
+          </h5>
 
-          <div className="next18__nutrition-compliant-calcium-magnesium">
-            <div className="next18__nutrition-compliant-calcium">
+          <div className="next18__nutrition-compliant-calcium-magnesium" style={{ display: 'flex', gap: '30px', marginTop: '30px' }}>
+            <div className="next18__nutrition-compliant-calcium" style={compliantBackgroundStyle}>
               <h4>カルシウム</h4>
               <p>
                 骨や歯の成長をサポートし、筋肉の動きをサポートします。
                 カルシウムは、成長期に骨の中に最も多く貯めることができます。
               </p>
+              <div style={calciumBeforeStyle}></div>
             </div>
-            <div className="next18__nutrition-compliant-magnesium">
+            <div className="next18__nutrition-compliant-magnesium" style={compliantBackgroundStyle}>
               <h4>マグネシウム</h4>
               <p>
                 マグネシウムは、多くの体内酵素の正常な働きとエネルギー産生を助けるとともに、血液循環を正常に保つのに必要な栄養素です。
               </p>
+              <div style={magnesiumBeforeStyle}></div>
             </div>
           </div>
-          <div className="next18__nutrition-compliant-vitamin-d">
+
+          <div className="next18__nutrition-compliant-vitamin-d" style={compliantBackgroundStyle}>
             <h4>ビタミンD</h4>
             <p>
               発育や発達に影響する、骨を強くしたり、筋肉をつくるのに必要な要素です。
               <br />
               日光を浴びることでも体内で生成できます。
             </p>
+            <div style={vitaminDBeforeStyle}></div>
           </div>
 
           <div className="next18__nutrition-compliant-trusted-quality">
             <div className="next18__nutrition-compliant-trusted-quality-text">
               <h5>
-                NEXT-18 PROTEINは、
-                <br />
-                成長期のお子様に安心して摂取できるよう、
-                <br />
-                <span className="highline">第三者機関で成分を分析</span>し、
-                <br />
+                NEXT-18 PROTEINは、<br />
+                成長期のお子様に安心して摂取できるよう、<br />
+                <span className="accent">第三者機関で成分を分析</span>し、<br />
                 パッケージに栄養成分を表記しています。
               </h5>
               <p>
