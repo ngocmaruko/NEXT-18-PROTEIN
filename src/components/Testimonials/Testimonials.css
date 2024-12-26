@@ -4,7 +4,9 @@
 .testimonial {
   /*padding: 90px 0;*/
 }
-
+.testimonial-title{
+  padding-top: 60px;
+}
 .testimonial h2{
   color: #EB6100;
   margin: 10px 0;

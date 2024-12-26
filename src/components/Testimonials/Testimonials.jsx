@@ -33,16 +33,19 @@ const testimonialsData = [
 const Testimonials = () => {
   return (
     <div className="testimonials">
-      <h2>ご利用者のお声</h2>
-      <h4>商品サポーターから喜びの声が続々！</h4>
       {testimonialsData.map((testimonial, index) => (
-        <TestimonialCard key={index} index={index} {...testimonial} />
+        <TestimonialCard
+          key={index}
+          index={index}
+          {...testimonial}
+          showTitle={index === 0} // Pass this prop to the first testimonial
+        />
       ))}
     </div>
   );
 };
 
-const TestimonialCard = ({ title, text, img, index }) => {
+const TestimonialCard = ({ title, text, img, index, showTitle }) => {
   const [ref, isVisible] = useOnScrollVisibility();
 
   const h5BackgroundStyle = {
@@ -51,15 +54,30 @@ const TestimonialCard = ({ title, text, img, index }) => {
     marginBottom: "20px",
   };
 
-  const backgroundStyle = index % 2 === 0
-    ? { background: `url('/img/testimonials_bg-even.jpg') no-repeat center/cover` }
-    : { background: `url('/img/testimonials_bg-odd.jpg') no-repeat center/cover` };
+  const backgroundStyle =
+    index % 2 === 0
+      ? {
+          background: `url('/img/testimonials_bg-even.jpg') no-repeat center/cover`,
+        }
+      : {
+          background: `url('/img/testimonials_bg-odd.jpg') no-repeat center/cover`,
+        };
 
   return (
     <div className="testimonial" style={backgroundStyle}>
+      {showTitle && (
+        <div className="testimonial-title">
+          <h2>ご利用者のお声</h2>
+          <h4>商品サポーターから喜びの声が続々！</h4>
+        </div>
+      )}
       <div className="inner">
         <div className="testimonial-text">
-            <h5 ref={ref} className={isVisible ? "slide-right" : ""} style={h5BackgroundStyle}>
+          <h5
+            ref={ref}
+            className={isVisible ? "slide-right" : ""}
+            style={h5BackgroundStyle}
+          >
             {title}
           </h5>
           <p>{text}</p>
