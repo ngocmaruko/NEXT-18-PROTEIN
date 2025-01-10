@@ -36,20 +36,31 @@ text-align: center;
   flex-wrap: wrap;
   justify-content: space-around;
 }
-
 .image-grid__item {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.image-grid__item p {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0;
+  margin: 40px 0 20px;
+  height: 3rem; /* Set a fixed height for uniform spacing */
+  display: flex; /* Align text within the height */
+  justify-content: center;
   align-items: center;
 }
+
 
 .image-grid__circle {
   width: 150px;
   height: 150px;
   border-radius: 50%;
   overflow: hidden;
-  margin: 0 auto 10px auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -62,11 +73,6 @@ text-align: center;
   object-fit: cover;
 }
 
-.image-grid__item p {
-  font-size: 1.2rem;
-  margin: 40px 0 10px;
-  font-weight: bold;
-}
 @media (min-width: 769px) and (max-width: 1180px) {
   .next18__mv {
     height: 67vh;

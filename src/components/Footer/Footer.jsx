@@ -44,8 +44,8 @@ const Footer = () => {
             <span>NEXT18の<br />ご購入はこちら</span>
           </div>
           <div className="footer-buttons">
-            <div className="footer-button"><img src='/img/hongo.png' alt="hongo 公式サイト" /></div>
-            <div className="footer-button"><img src='/img/amazon.png' alt="アマゾン" /></div>
+            <div className="footer-button"><img src='/img/hongo-btn.jpg' alt="hongo 公式サイト" /></div>
+            <div className="footer-button"><img src='/img/amazon-btn.jpg' alt="アマゾン" /></div>
           </div>
         </div>
       </footer>

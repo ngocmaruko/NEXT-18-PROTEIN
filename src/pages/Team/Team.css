@@ -118,7 +118,7 @@
     gap: 30px;
   }
   .sponsorship-sec1 h5 {
-    width: 100vw;
+    width: 100vw !important;
   }
   .sponsorship-sec1 .bg-silver {
     bottom: -48vh;
@@ -131,7 +131,7 @@
     transform: rotate(9deg);
   }
   .sponsorship-sec1-img {
-    width: 100%; /* Ensure the image container spans the full width */
+    width: 100%;
     display: flex;
     justify-content: flex-end;
     margin: 0 -80px 0 auto;
@@ -141,7 +141,7 @@
 
 .sponsorship-sec2 {
   position: relative;
-  overflow: hidden; /* Hide any content that overflows */
+  overflow: hidden;
 }
 
 .sponsorship-sec2-top,
@@ -225,8 +225,8 @@
     justify-content: space-around;
   }
   .sponsorship-sec2 h5 {
-    width: 100vw;
-    top: 10px;
+    width: 100vw !important;
+    top: 10px !important;
   }
   .sponsorship-sec2 .bg-silver {
     left: 15vw;
