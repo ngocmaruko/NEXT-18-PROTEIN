@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import './HomePage.css';
 import { useLocation } from 'react-router-dom'; 
 import Splash from '../../components/Splash/Splash';
-import Hero from '../Hero/Hero';
+import Hero from '../../components/Hero/Hero';
 import Next18 from '../../components/Next18/Next18';
 import Dedication from '../../components/Dedication/Dedication';
 import Safety from '../../components/Safety/Safety';
@@ -33,13 +33,13 @@ const HomePage = () => {
     width: '100%',
     height: '100%',
     zIndex: '-1',
-    background: 'url("/img/bg_main.png") no-repeat 50% 50% / cover',
+    background: 'url("/img/bg_main.webp") no-repeat 50% 50% / cover',
     content: "''",
   };
 
   return (
     <section className='l-body'>
-      {/* Apply the background styling to a wrapper div */}
+
       <div style={backgroundStyle}></div>
       
       {showSplash && <Splash />} {/* Render Splash only when pathname is '/' and no hash */}

@@ -14,7 +14,7 @@ const Team = () => {
         className="sponsorship-sec1"
         style={{
           background:
-            'url("/img/sponsorship-sec1_bg.jpg") no-repeat center/cover',
+            'url("/img/sponsorship-sec1_bg.webp") no-repeat center/cover',
         }}
       >
         <div className="inner">

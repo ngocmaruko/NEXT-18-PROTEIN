@@ -42,6 +42,14 @@ text-align: center;
   justify-content: center;
   align-items: center;
   text-align: center;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
+  transition-delay: var(--delay);
+}
+.image-grid__item.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .image-grid__item p {
@@ -108,24 +116,31 @@ text-align: center;
 }
 
 /*nutrition-compliant*/
-.next18__nutrition-compliant-calcium-magnesium {
+.next18__nutrition-compliant {
   display: flex;
   gap: 30px;
   margin-top: 30px;
 }
-.next18__nutrition-compliant-calcium-magnesium p {
+.next18__nutrition-compliant-cmv{
+  opacity: 0;
+}
+.next18__nutrition-compliant-cmv.show{
+  opacity: 1;
+}
+.next18__nutrition-compliant p {
   text-align: left;
 }
-.next18__nutrition-compliant-calcium,
-.next18__nutrition-compliant-magnesium,
-.next18__nutrition-compliant-vitamin-d {
+.next18__nutrition-compliant.calcium,
+.next18__nutrition-compliant.magnesium,
+.next18__nutrition-compliant.vitamin-d {
   padding: 30px 20px;
   border-radius: 10px;
   margin: 40px 0;
   position: relative;
+  flex-direction: column;
 }
 
-.next18__nutrition-compliant-calcium::before{
+.next18__nutrition-compliant.calcium::before{
   position: absolute;
   content: '';
   width: 100px; 
@@ -133,7 +148,7 @@ text-align: center;
   top: -50px;
   left: 0px;
 }
-.next18__nutrition-compliant-magnesium::before{
+.next18__nutrition-compliant.magnesium::before{
   position: absolute;
   content: '';
   width: 100px; 
@@ -141,7 +156,7 @@ text-align: center;
   top: -50px;
   left: 0px;
 }
-.next18__nutrition-compliant-vitamin-d::before{
+.next18__nutrition-compliant.vitamin-d::before{
   position: absolute;
   content: '';
   width: 100px; 
@@ -170,7 +185,7 @@ text-align: center;
 }
 
 @media (max-width:768px) {
-  .next18__nutrition-compliant-calcium-magnesium, .next18__nutrition-compliant-trusted-quality{
+  .next18__nutrition-compliant, .next18__nutrition-compliant-trusted-quality{
     flex-direction: column;
     gap: 30px;
   }

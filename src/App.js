@@ -12,7 +12,7 @@ import Navbar1 from "./components/Navbar1/Navbar1";
 function App() {
   return (
     <div className="App">
-      <Navbar1/>
+      <Navbar1 />
       <main>
         <Routes>
           <Route path="/" element={<HomePage />} />

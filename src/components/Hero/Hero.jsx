@@ -3,7 +3,7 @@ import "./Hero.css"; // Import the CSS file for the Hero component
 
 const Hero = () => {
   return (
-    <div className="hero" style={{background:'url("/img/mv.png") no-repeat center/cover'}}>
+    <div className="hero" style={{background:'url("/img/mv.webp") no-repeat center/cover'}}>
       <div className="mv-item">
         <figure className="mv-item__text-top">
           <img src="/img/p_mv_item_01.png" alt="栄養機能食品" />

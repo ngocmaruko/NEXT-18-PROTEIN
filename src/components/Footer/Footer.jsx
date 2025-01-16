@@ -44,8 +44,8 @@ const Footer = () => {
             <span>NEXT18の<br />ご購入はこちら</span>
           </div>
           <div className="footer-buttons">
-            <div className="footer-button"><img src='/img/hongo-btn.jpg' alt="hongo 公式サイト" /></div>
-            <div className="footer-button"><img src='/img/amazon-btn.jpg' alt="アマゾン" /></div>
+            <div className="footer-button"><a href="https://hongo-healthcare.com/product/next-18_protein_1pack/" target="_blank"><img src='/img/hongo-btn.jpg' alt="hongo 公式サイト" /></a></div>
+            <div className="footer-button"><a href="https://www.amazon.co.jp/NEXT-18-PROTEIN-%E3%82%B8%E3%83%A5%E3%83%8B%E3%82%A2-%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3-%E3%82%B5%E3%83%97%E3%83%AA%E3%83%A1%E3%83%B3%E3%83%88/dp/B0D34FDQQ5" target="_blank"><img src='/img/amazon-btn.jpg' alt="アマゾン" /></a></div>
           </div>
         </div>
       </footer>

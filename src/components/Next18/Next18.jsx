@@ -1,11 +1,22 @@
-import React from "react";
+import {React, useEffect} from "react";
 import "./Next18.css";
 import useOnScrollVisibility from "../../hooks/useOnScrollVisibility";
+import Observer from "../Observer/Observer";
 
 const Next18 = () => {
   const [h1Ref, isH1Visible] = useOnScrollVisibility(0.9); 
 
-  // Inline styles for backgrounds
+ // Apply the observer with delay behavior
+ Observer({
+  selector: '.image-grid__item',
+  addDelay: true, // Add delay effect for Next18
+});
+Observer({
+  selector: '.next18__nutrition-compliant',
+  addDelay: true, // Add delay effect for Next18
+});
+
+  
   const mvBackgroundStyle = {
     background: 'url(/img/next18_mv.png) no-repeat bottom/cover',
   };
@@ -69,7 +80,6 @@ const Next18 = () => {
           そんなジュニア世代（少年・少女）たちのため <br />
           「短時間で手軽においしくエネルギーと栄養が摂取できる商品」をコンセプトに開発した商品です。
         </p>
-
         <div className="image-grid">
           <div className="image-grid__item">
             <p>
@@ -119,8 +129,8 @@ const Next18 = () => {
             <span className="accent">栄養機能食品</span>です
           </h5>
 
-          <div className="next18__nutrition-compliant-calcium-magnesium" style={{ display: 'flex', gap: '30px', marginTop: '30px' }}>
-            <div className="next18__nutrition-compliant-calcium" style={compliantBackgroundStyle}>
+          <div className="next18__nutrition-compliant-cmv" style={{ display: 'flex', gap: '30px', marginTop: '30px' }}>
+            <div className="next18__nutrition-compliant-cmv--calcium" style={compliantBackgroundStyle}>
               <h4>カルシウム</h4>
               <p>
                 骨や歯の成長をサポートし、筋肉の動きをサポートします。
@@ -128,7 +138,7 @@ const Next18 = () => {
               </p>
               <div style={calciumBeforeStyle}></div>
             </div>
-            <div className="next18__nutrition-compliant-magnesium" style={compliantBackgroundStyle}>
+            <div className="next18__nutrition-compliant-cmv magnesium" style={compliantBackgroundStyle}>
               <h4>マグネシウム</h4>
               <p>
                 マグネシウムは、多くの体内酵素の正常な働きとエネルギー産生を助けるとともに、血液循環を正常に保つのに必要な栄養素です。
@@ -137,7 +147,7 @@ const Next18 = () => {
             </div>
           </div>
 
-          <div className="next18__nutrition-compliant-vitamin-d" style={compliantBackgroundStyle}>
+          <div className="next18__nutrition-compliant-cmv vitamin-d" style={compliantBackgroundStyle}>
             <h4>ビタミンD</h4>
             <p>
               発育や発達に影響する、骨を強くしたり、筋肉をつくるのに必要な要素です。
