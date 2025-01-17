@@ -1,6 +1,6 @@
 import React from "react";
 import "./Testimonials.css";
-import useOnScrollVisibility from "../../hooks/useOnScrollVisibility";
+import Observer from "../Observer/Observer";
 
 const testimonialsData = [
   {
@@ -32,22 +32,23 @@ const testimonialsData = [
 
 const Testimonials = () => {
   return (
-    <div className="testimonials">
-      {testimonialsData.map((testimonial, index) => (
-        <TestimonialCard
-          key={index}
-          index={index}
-          {...testimonial}
-          showTitle={index === 0} // Pass this prop to the first testimonial
-        />
-      ))}
-    </div>
+    <>
+      <Observer />
+      <div className="testimonials">
+        {testimonialsData.map((testimonial, index) => (
+          <TestimonialCard
+            key={index}
+            index={index}
+            {...testimonial}
+            showTitle={index === 0} // Pass this prop to the first testimonial
+          />
+        ))}
+      </div>
+    </>
   );
 };
 
 const TestimonialCard = ({ title, text, img, index, showTitle }) => {
-  const [ref, isVisible] = useOnScrollVisibility();
-
   const h5BackgroundStyle = {
     background: `url('/img/comment_bg.png') no-repeat left/cover`,
     padding: "30px",
@@ -66,23 +67,17 @@ const TestimonialCard = ({ title, text, img, index, showTitle }) => {
   return (
     <div className="testimonial" style={backgroundStyle}>
       {showTitle && (
-        <div className="testimonial-title">
+        <div className="testimonial-title" data--fadein>
           <h2>ご利用者のお声</h2>
           <h4>商品サポーターから喜びの声が続々！</h4>
         </div>
       )}
       <div className="inner">
-        <div className="testimonial-text">
-          <h5
-            ref={ref}
-            className={isVisible ? "slide-right" : ""}
-            style={h5BackgroundStyle}
-          >
-            {title}
-          </h5>
+        <div className="testimonial-text"  data--fadeinright>
+          <h5 style={h5BackgroundStyle}>{title}</h5>
           <p>{text}</p>
         </div>
-        <div className="testimonial-img">
+        <div className="testimonial-img" data--fadeinleft>
           <img src={img} alt="" />
         </div>
       </div>

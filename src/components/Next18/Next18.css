@@ -18,15 +18,6 @@ text-align: center;
   margin-top: -65vh;
   width: 30vw;
 }
-.next18__mv-content h1 {
-  transition: transform 0.5s ease-in-out;
-  transform: scale(0.1);
-}
-
-.next18__mv-content h1.scaled {
-  transform: scale(1);
-}
-
 .next18__mv-content h4 {
   margin-top: -1.2vh;
 }
@@ -42,14 +33,7 @@ text-align: center;
   justify-content: center;
   align-items: center;
   text-align: center;
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 1s ease, transform 1s ease;
-  transition-delay: var(--delay);
-}
-.image-grid__item.show {
-  opacity: 1;
-  transform: translateY(0);
+
 }
 
 .image-grid__item p {
@@ -116,23 +100,13 @@ text-align: center;
 }
 
 /*nutrition-compliant*/
-.next18__nutrition-compliant {
-  display: flex;
-  gap: 30px;
-  margin-top: 30px;
-}
-.next18__nutrition-compliant-cmv{
-  opacity: 0;
-}
-.next18__nutrition-compliant-cmv.show{
-  opacity: 1;
-}
+
 .next18__nutrition-compliant p {
   text-align: left;
 }
-.next18__nutrition-compliant.calcium,
-.next18__nutrition-compliant.magnesium,
-.next18__nutrition-compliant.vitamin-d {
+.next18__nutrition-compliant-cmv.calcium,
+.next18__nutrition-compliant-cmv.magnesium,
+.next18__nutrition-compliant-cmv.vitamin-d {
   padding: 30px 20px;
   border-radius: 10px;
   margin: 40px 0;
@@ -140,7 +114,7 @@ text-align: center;
   flex-direction: column;
 }
 
-.next18__nutrition-compliant.calcium::before{
+.next18__nutrition-compliant-cmv.calcium::before{
   position: absolute;
   content: '';
   width: 100px; 
@@ -148,7 +122,7 @@ text-align: center;
   top: -50px;
   left: 0px;
 }
-.next18__nutrition-compliant.magnesium::before{
+.next18__nutrition-compliant-cmv.magnesium::before{
   position: absolute;
   content: '';
   width: 100px; 
@@ -156,7 +130,7 @@ text-align: center;
   top: -50px;
   left: 0px;
 }
-.next18__nutrition-compliant.vitamin-d::before{
+.next18__nutrition-compliant-cmv.vitamin-d::before{
   position: absolute;
   content: '';
   width: 100px; 
@@ -169,14 +143,14 @@ text-align: center;
   margin-top: 10vh;
   justify-content: space-between;
 }
-.next18__nutrition-compliant-trusted-quality-text p{
+.next18__nutrition-compliant-trusted-quality--text p{
   border: 1px solid #FFDE00;
   padding: 30px 20px;
   text-align: left !important;
   width: 100%;
 }
-.next18__nutrition-compliant-trusted-quality-text,
-.next18__nutrition-compliant-trusted-quality-img {
+.next18__nutrition-compliant-trusted-quality--text,
+.next18__nutrition-compliant-trusted-quality--img {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -189,7 +163,7 @@ text-align: center;
     flex-direction: column;
     gap: 30px;
   }
-  .next18__nutrition-compliant-trusted-quality-img img{
+  .next18__nutrition-compliant-trusted-quality--img img{
     max-width: 80%;
   }
 }

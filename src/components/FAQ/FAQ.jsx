@@ -1,6 +1,6 @@
 import React from "react";
 import "./FAQ.css";
-import useOnScrollVisibility from "../../hooks/useOnScrollVisibility";
+import Observer from "../Observer/Observer";
 
 const faqData = [
   {
@@ -54,21 +54,22 @@ const faqsBackground = {
 };
 
 const FAQ = () => (
+  <>
+  <Observer />
   <div className="faqs" style={faqsBackground}>
     <div className="inner">
-      <h2>よくあるご質問</h2>
+      <h2 data--fadein>よくあるご質問</h2>
       {faqData.map((faq, index) => (
         <FAQItem key={index} faq={faq} />
       ))}
     </div>
   </div>
+  </>
 );
 
 const FAQItem = ({ faq }) => {
-  const [ref, isVisible] = useOnScrollVisibility();
-
   return (
-    <div ref={ref} className={`faq ${isVisible ? "slide-top" : ""}`}>
+    <div className="faq" data--fadein>
       <h5>{faq.question}</h5>
       <p>{faq.answer}</p>
     </div>

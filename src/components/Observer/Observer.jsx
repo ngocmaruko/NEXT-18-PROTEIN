@@ -1,4 +1,6 @@
 import { useEffect } from 'react';
+import './Observer.css';
+
 
 const Observer = (options = {}) => {
   useEffect(() => {
@@ -7,17 +9,16 @@ const Observer = (options = {}) => {
         if (entry.isIntersecting) {
           entry.target.classList.add('show');
 
-          // Apply custom delay only for Next18 component
           if (options.addDelay) {
             entry.target.style.setProperty('--delay', `${index * 0.3}s`);
           }
 
-          observer.unobserve(entry.target); // Stop observing once the item is visible
+          observer.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.5 });
+    }, { threshold: 0.6 });
 
-    const items = document.querySelectorAll(options.selector);
+    const items = document.querySelectorAll('[data--fadein], [data--fadedown], [data--fadeinleft],[data--fadeinright], [data--scaled]'); // Target elements with data-fadein attribute
     items.forEach(item => observer.observe(item));
 
     // Clean up on unmount

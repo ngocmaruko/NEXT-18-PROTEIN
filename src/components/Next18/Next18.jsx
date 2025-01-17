@@ -1,22 +1,9 @@
-import {React, useEffect} from "react";
+import {React} from "react";
 import "./Next18.css";
-import useOnScrollVisibility from "../../hooks/useOnScrollVisibility";
 import Observer from "../Observer/Observer";
 
 const Next18 = () => {
-  const [h1Ref, isH1Visible] = useOnScrollVisibility(0.9); 
 
- // Apply the observer with delay behavior
- Observer({
-  selector: '.image-grid__item',
-  addDelay: true, // Add delay effect for Next18
-});
-Observer({
-  selector: '.next18__nutrition-compliant',
-  addDelay: true, // Add delay effect for Next18
-});
-
-  
   const mvBackgroundStyle = {
     background: 'url(/img/next18_mv.png) no-repeat bottom/cover',
   };
@@ -56,16 +43,16 @@ Observer({
   };
 
   return (
+    <>
+    <Observer addDelay={true} />
+
     <section id="next18">
       <div className="next18__mv" style={mvBackgroundStyle}>
         <div className="next18__mv-content">
-          <h1
-            ref={h1Ref}
-            className={isH1Visible ? "scaled" : ""}
-          >
+          <h1 data--scaled>
             <img src="/img/next18_mv_logo.png" alt="NEXT-18 PROTEIN Logo" />
           </h1>
-          <h4>
+          <h4 data--fadein>
             <img
               src="/img/next18_mv_text.png"
               alt="スクスク伸びる成長期のカラダに必要な栄養素をシッカリ配合！"
@@ -80,7 +67,7 @@ Observer({
           そんなジュニア世代（少年・少女）たちのため <br />
           「短時間で手軽においしくエネルギーと栄養が摂取できる商品」をコンセプトに開発した商品です。
         </p>
-        <div className="image-grid">
+        <div className="image-grid" data--fadein>
           <div className="image-grid__item">
             <p>
               WPH <br /> プロテイン
@@ -119,7 +106,7 @@ Observer({
           </div>
         </div>
       </div>
-      <div className="next18__nutrition-compliant">
+      <div className="next18__nutrition">
         <div className="inner">
           <h2>
             NEXT-18PROTEIN <span>は</span>
@@ -129,8 +116,8 @@ Observer({
             <span className="accent">栄養機能食品</span>です
           </h5>
 
-          <div className="next18__nutrition-compliant-cmv" style={{ display: 'flex', gap: '30px', marginTop: '30px' }}>
-            <div className="next18__nutrition-compliant-cmv--calcium" style={compliantBackgroundStyle}>
+          <div className="next18__nutrition-compliant" style={{ display: 'flex', gap: '30px', marginTop: '30px' }} data--fadein>
+            <div className="next18__nutrition-compliant-cmv calcium" style={compliantBackgroundStyle}>
               <h4>カルシウム</h4>
               <p>
                 骨や歯の成長をサポートし、筋肉の動きをサポートします。
@@ -147,7 +134,7 @@ Observer({
             </div>
           </div>
 
-          <div className="next18__nutrition-compliant-cmv vitamin-d" style={compliantBackgroundStyle}>
+          <div className="next18__nutrition-compliant-cmv vitamin-d" style={compliantBackgroundStyle} data--fadein>
             <h4>ビタミンD</h4>
             <p>
               発育や発達に影響する、骨を強くしたり、筋肉をつくるのに必要な要素です。
@@ -157,8 +144,8 @@ Observer({
             <div style={vitaminDBeforeStyle}></div>
           </div>
 
-          <div className="next18__nutrition-compliant-trusted-quality">
-            <div className="next18__nutrition-compliant-trusted-quality-text">
+          <div className="next18__nutrition-compliant-trusted-quality" data--fadein>
+            <div className="next18__nutrition-compliant-trusted-quality--text">
               <h5>
                 NEXT-18 PROTEINは、<br />
                 成長期のお子様に安心して摂取できるよう、<br />
@@ -170,7 +157,7 @@ Observer({
                 ビタミンD 3.6μg
               </p>
             </div>
-            <div className="next18__nutrition-compliant-trusted-quality-img">
+            <div className="next18__nutrition-compliant-trusted-quality--img">
               <img src="/img/seiseki.png" alt="検査成績書" />
               <p>検査成績書</p>
             </div>
@@ -178,6 +165,7 @@ Observer({
         </div>
       </div>
     </section>
+    </>
   );
 };
 

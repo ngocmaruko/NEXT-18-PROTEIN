@@ -4,6 +4,7 @@
 .sec8 {
   position: relative;
 }
+
 /* sec1 */
 .dedication__sec1-img {
   display: flex;
@@ -83,7 +84,7 @@
 }
 
 .dedication__sec3 {
-  color: #000;
+  color: #000;  
 }
 .dedication__sec3-junior-protein {
   text-align: center;
